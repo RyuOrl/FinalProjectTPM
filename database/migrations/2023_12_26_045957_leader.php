@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->string('whatsapp_number')->unique();
             $table->string('line_id')->unique();
-            $table->string('github_id')->unique();
+            $table->string('github_id');
             $table->string('birth_place');
             $table->date('birth_date');
             $table->string('cv_path');
