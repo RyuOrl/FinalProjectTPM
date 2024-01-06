@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="{{asset('build/assets/css/style_landing.css')}}">
-    <link rel="stylesheet" href="{{asset('build/assets/css/style_prizes.css')}}">
-    <link rel="stylesheet" href="{{asset('build/assets/css/fontawesome.css')}}" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{{asset('assets/css/style_landing.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/style_prizes.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/fontawesome.css')}}" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
     <section class="page">
         <nav>
             <ul class="image1">
-                <img src="{{asset('build/assets/image/image1.png')}}" alt="">
+                <img src="{{asset('assets/image/image1.png')}}" alt="">
             </ul>
     
             <ul class="navi">
@@ -32,7 +32,7 @@
         <section>
             <section class="main">
                 <div>HACK</div>
-                <img src="{{asset('build/assets/image/image2.png')}}" alt="">
+                <img src="{{asset('assets/image/image2.png')}}" alt="">
                 <div>THON</div>
             </section>
     
@@ -40,7 +40,7 @@
 
             <button href="/dashboard" class="lets">Let’s Start</button>
 
-            <img src="{{asset('build/assets/image/image3.png')}}" alt="" class="image3">
+            <img src="{{asset('assets/image/image3.png')}}" alt="" class="image3">
         </section>
     </section>
 
@@ -83,6 +83,6 @@
         </section>
     </section>
 
-    <script src="{{asset('build/assets/js/script.js')}}"></script>
+    <script src="{{asset('assets/js/script.js')}}"></script>
 </body>
 </html>

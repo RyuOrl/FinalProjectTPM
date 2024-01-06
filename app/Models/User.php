@@ -3,10 +3,11 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
-use Laravel\Sanctum\HasApiTokens;
 
 class Leader extends Authenticatable
 {
@@ -37,4 +38,9 @@ class Leader extends Authenticatable
     protected $casts = [
         'password' => 'hashed',
     ];
+
+    public function leader(): BelongsTo
+    {
+        return $this->belongsTo(Leader::class);
+    }
 }
