@@ -18,13 +18,18 @@ html, body {
 
 body {
     background-color: var(--primary);
+    align-items: center;
+    justify-content:center;
 }
 
 nav {
     display: flex;
     align-items: center;
-    margin: 27px 74px;    
+    margin-left: 0px;
+    margin: 27px 0px;
+    justify-content: center;
 }
+
 
 .nav-button {
     background-color: transparent;
@@ -45,7 +50,7 @@ nav {
 }
 
 .nav1 {
-    margin-left: 645px;
+    margin-left: 900px;
 }
 
 .login-button::before {
@@ -65,13 +70,18 @@ nav {
     color: white;
 }
 
+.login-button:hover {
+    border-radius: 90%;
+}
 .main {
     color: #FFFFFF;
     font-family: poppins;
     font-size: 110px;
     font-weight: 500;
-    margin: 70px 74px;
+    margin: 70px 0px 0px;
+    margin-right: 820px;
     display: flex;
+    justify-content: center;
 }
 
 .main img {
@@ -83,13 +93,27 @@ nav {
 .Lorem {
     color: #FFFFFF;
     font-family: montserrat;
-    font-size: 64px;
+    font-size: 50px;
     font-weight: 300;
     margin: 0px 74px;
+    margin-right: 890px;
+    display: flex;
+    justify-content: center;
+}
+
+.Innovation {
+    margin-right: 1350px;
 }
 
 .lets {
-    background-color: var(--lets_but);
+    display: flex;
+    justify-content: center;
+    margin-right: 1310px;
+    margin-top: 80px;
+}
+
+.lets1 {
+    background: linear-gradient(to bottom, #FFFFFF33 20%, #352DEB1A 100%);
     border: none;
     cursor: pointer;
     color: #FFFFFF;
@@ -99,22 +123,14 @@ nav {
     padding: 10px 40px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
-    transition-duration: 0.4s;
-    margin: 100px 74px;
     border-radius: 100px;
     border: 1.5px solid white;
-    
-}
-
-.lets:hover,
-.lets:focus{
-  background-color: white;
-  color:blue;
 }
 
 .image3 {
     position: absolute;
+    display: flex;
     top: 300px;
-    right: 0;
+    justify-content: center;
+    margin-left: 544px;
 }

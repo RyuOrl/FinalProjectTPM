@@ -3,45 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="{{asset('assets/css/style_landing.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/style_prizes.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/fontawesome.css')}}" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Combined Page</title>
+    <link rel="stylesheet" href="{{ asset('assets/css/style_landing.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/style_prizes.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/fontawesome.css') }}" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-    <section class="page">
-        <nav>
-            <ul class="image1">
-                <img src="{{asset('assets/image/image1.png')}}" alt="">
-            </ul>
-    
-            <ul class="navi">
-                <button class="nav-button nav1">Home</button>
-                <a href="#prizes" class="nav-button nav2">Prizes</a>
-                <button class="nav-button nav3">Mentor & Jury</button>
-                <button class="nav-button nav4">About</button>
-                <button class="nav-button nav5">FAQ</button>
-                <button class="nav-button nav6">Timeline</button>
-                <button class="nav-button nav7 login-button">Login</button>
-            </ul>
-        </nav>
-    
-        <hr>
-    
-        <section>
-            <section class="main">
-                <div>HACK</div>
-                <img src="{{asset('assets/image/image2.png')}}" alt="">
-                <div>THON</div>
-            </section>
-    
-            <div class="Lorem">Lorem Ipsum</div>
+    <nav class="navbar">
+        <img src="{{ asset('assets/image/image1.png') }}" alt="" class="image1">
+      
+        <a href="#home" class="nav-button nav1">Home</a>
+        <a href="#prizes" class="nav-button">Prizes</a>
+        <button class="nav-button">Mentor & Jury</button>
+        <button class="nav-button">About</button>
+        <button class="nav-button">FAQ</button>
+        <button class="nav-button">Timeline</button>
+        <a href="/login" class="nav-button login-button">Login</a>
+    </nav>
 
-            <button href="/dashboard" class="lets">Let’s Start</button>
-
-            <img src="{{asset('assets/image/image3.png')}}" alt="" class="image3">
+    <hr>
+    
+    <section class="page" id="home">
+        <section class="main">
+            <div>HACK</div>
+            <img src="{{ asset('assets/image/image2.png') }}" alt="">
+            <div>THON</div>
         </section>
+
+        <div class="Lorem">Creating The Future Through</div>
+        <div class="Lorem Innovation">Innovation</div>
+
+        <div class="lets">
+            <button href='/dashboard' class="lets1">Let’s Start</button>
+        </div>
+        
+        <div class="image3">
+            <img src="{{ asset('assets/image/image3.png') }}" alt="">
+        </div>
     </section>
 
     <section class="page" id="prizes">
@@ -50,7 +49,7 @@
                 <h1><center>Champion Prizes</center></h1>
             </div>
         </section>
-
+    
         <section class="prize">
             <div class="card card1">
                 <h2>Juara 2</h2>
@@ -58,7 +57,7 @@
                 <p>Rp ---------</p>
                 <p>Merchandise</p>
                 <p>Sertifikat</p>
-
+    
             </div>
             <div class="card card2">
                 <h2>Juara 1</h2>
@@ -83,6 +82,8 @@
         </section>
     </section>
 
-    <script src="{{asset('assets/js/script.js')}}"></script>
+    <script>
+        
+    </script>
 </body>
 </html>

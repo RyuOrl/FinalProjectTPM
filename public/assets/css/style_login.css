@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: poppins;
+}
+
+:root {
+   --primary: #060A06;
+   --font_nav: #FFFFFF;
+   --lets_but: #352DEB;
+}
+
+html, body {
+   scroll-behavior: smooth;
+}
+
+body {
+   height: 100vh;
+   justify-content: center;
+   align-items: center;
+   padding: 10px;
+   background-color: var(--primary);
+   background-image: url('Image/image3.png');
+   background-size: 1300px;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-position: bottom right;
+}
+
+.main {
+   color: #FFFFFF;
+   font-family: poppins;
+   font-size: 110px;
+   font-weight: 500;
+   flex-wrap: wrap;
+   display: flex;
+   justify-content: center;
+   margin: 40px;
+}
+
+.main img {
+   margin: 35px 10px 0px;
+   width: 100px;
+   height: 100px;
+}
+
+.container {
+   display: block;
+   margin: auto;
+   margin-top: 30px;
+   color: #FFFFFF;
+   max-width: 800px;
+   width: 100%;
+   padding: 60px;
+   border-radius: 45px;
+   border: 1px solid #FFFFFF;
+   background: linear-gradient(to bottom, #FFFFFF33 20%, #352DEB1A 100%);
+}
+
+.container .title {
+   font-size: 48px;
+   font-weight: 600;
+   text-align: center;
+}
+
+form .user-detail .input-box {
+   margin: 20px 0px 15px 0px;
+}
+
+form .user-detail .input-box .details {
+   font-size: 20px;
+   font-weight: 500;
+   margin-bottom: 100px;
+}
+
+.details {
+   padding-bottom: 50px;
+}
+
+.user-detail .input-box input{
+   color: #FFFFFF;
+   height: 45px;
+   width: 100%;
+   border-radius: 10px;
+   border: 1px solid #ccc;
+   padding-left: 15px;
+   background: transparent
+}
+
+.donthave {
+   display: flex;
+   font-size: 12px;
+   font-weight: 300;
+   justify-content: center;
+   padding: 20px;
+   
+}
+
+.donthave2 {
+   color: #FFFFFF;
+   padding: 0px 3px;
+   cursor: pointer;
+   text-decoration: underline
+}
+
+.donthave2:hover {
+   color: #555;
+}
+
+.button {
+   display: flex;
+   justify-content: center;
+   margin-top: 40px;
+  
+}
+
+.submit {
+   text-decoration: none;
+   padding: 10px 50px;
+   border: 2px solid #FFFFFF;
+   border-radius: 45px;
+   font-size: 24px;
+   font-weight: 400;
+   color: #FFFFFF;
+   background: linear-gradient(to bottom, #FFFFFF33 20%, #352DEB1A 100%);
+   margin-left: 600px;
+   
+   text-align: center;
+}
+
+.submit:hover {
+   background-color: #555; 
+   color: white;
+   cursor: pointer;
+}
+.wrap{
+   margin: auto;
+   max-width: 800px;
+}

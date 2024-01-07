@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('groups', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('group');
             $table->string('password')->unique();
-            $table->enum('status', ['Binusian', 'Non-Binusian']);
+            $table->enum('status', ['binusian', 'non-binusian']);
             $table->foreignId('leader_id')->nullable();
-            $table->enum('role', ['User', 'Admin'])->default('User');
+            $table->enum('role', ['user', 'admin'])->default('user');
             $table->rememberToken();
             $table->timestamps();
         });
