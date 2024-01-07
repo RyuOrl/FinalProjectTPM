@@ -35,7 +35,7 @@
         <div class="Lorem Innovation">Innovation</div>
 
         <div class="lets">
-            <button href='/dashboard' class="lets1">Let’s Start</button>
+            <a href='{{ route('dashboard') }}' class="lets1">Let’s Start</a>
         </div>
         
         <div class="image3">
