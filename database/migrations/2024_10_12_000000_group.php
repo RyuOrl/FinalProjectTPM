@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('group');
             $table->string('password')->unique();
             $table->enum('status', ['binusian', 'non-binusian']);
-            $table->foreignId('leader_id')->nullable();
+            $table->foreignId('leader_id')->unique()->nullable();
             $table->enum('role', ['user', 'admin'])->default('user');
             $table->rememberToken();
             $table->timestamps();

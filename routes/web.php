@@ -15,11 +15,15 @@ use App\Http\Controllers\ProfileController;
 |
 */
 
-Route::get('/', function () {
+Route::get('/' , function () {
     return view('home'); // Choose either 'landing' or 'welcome'
 });
 
-Route::get('/dashboard', function () {
+Route::get('/home', function(){
+    return view('home');
+});
+
+Route::get('/user/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
@@ -29,8 +33,11 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+Route::get('/admin/panel', [AdminController::class, 'adminPanel'])
+->middleware(['auth', 'role:admin'])->name('admin.panel');
+
+
 require __DIR__.'/auth.php';
 
-Route::get('/admin-panel', [AdminController::class, 'adminPanel'])
-->middleware(['auth', 'role:admin'])->name('admin.panel');
+
 

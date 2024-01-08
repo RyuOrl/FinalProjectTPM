@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Combined Page</title>
-    <link rel="stylesheet" href="{{ asset('assets/css/style_landing.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/style_prizes.css') }}">
+    <title>Main</title>
+    <link rel="stylesheet" href="{{ asset('assets/css/style-home.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/fontawesome.css') }}" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
@@ -35,7 +34,7 @@
         <div class="Lorem Innovation">Innovation</div>
 
         <div class="lets">
-            <a href='{{ route('dashboard') }}' class="lets1">Let’s Start</a>
+            <a href="{{ route('dashboard') }}" class="lets1">Let’s Start</a>
         </div>
         
         <div class="image3">

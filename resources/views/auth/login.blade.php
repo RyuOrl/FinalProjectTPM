@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="{{ asset('assets/css/style_login.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/style-login.css') }}">
 </head>
 
 <body>
@@ -13,38 +13,39 @@
         <img src="{{ asset('assets/image/image2.png') }}" alt="">
         <div>THON</div>
     </section>
-<div class="wrap">
+
     <div class="container">
         <div class="title">Log In</div>
 
-        <form method="POST" action="{{ route('login') }}">
-          @csrf
+        <form action="{{ route('login') }}" method="POST">
+            @csrf
             <div class="user-detail">
                 <div class="input-box">
-                    <span class="details">Group Name</span>
-                    <input name="group" type="text" placeholder="Enter your group name" required>
+                    <span class="details">Nama Group</span>
+                    <input id="group" :value="old('group')" name="group" type="text" placeholder="Masukkan nama group" required>
+                    @error('group')
+                        <p style="color: red">{{ $message }}</p>
+                    @enderror
                 </div>
                 <div class="input-box">
                     <span class="details">Password</span>
-                    <input name="password" type="password" placeholder="Enter your password" required>
+                    <input id="password" name="password" type="password" placeholder="Masukkan password" required>
+                    @error('password')
+                        <p style="color:red">{{ $message }}</p>
+                    @enderror
                 </div>
             </div>
 
             <div class="donthave">
-                <div class="donthave1">Don't have an account yet?</div>
-                <a href="/register" class="donthave2">Register here</a>
+                <div class="donthave1">Belum memiliki akun?</div>
+                <a href="{{ route('register') }}" class="donthave2">Registrasi disini</a>
+            </div>   
+            <div class="button">
+                <a href="/home" class="submit">Back</a>
+                <button type="submit" class="submit" id="sub">Log In</button>
             </div>
-
-            
         </form>
-    </div>
-    <div class="kotak">
-        
-    </div>
     
-    <div class="button">
-        <a href="" class="submit">Log In</a>
-    </div>
 </div>
 </body>
 </html>
