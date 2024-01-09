@@ -23,8 +23,10 @@ return new class extends Migration
             $table->string('cv_path');
             $table->string('flazz_card_path')->nullable(); //yang ini gmn gais, 
             $table->string('id_card_path')->nullable();
+            $table->unsignedBigInteger('group_id');
             $table->rememberToken();
             $table->timestamps();
+            $table->foreign('group_id')->references('id')->on('groups');
         });
     
     }

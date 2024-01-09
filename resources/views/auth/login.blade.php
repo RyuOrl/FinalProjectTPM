@@ -38,7 +38,7 @@
 
             <div class="donthave">
                 <div class="donthave1">Belum memiliki akun?</div>
-                <a href="{{ route('register') }}" class="donthave2">Registrasi disini</a>
+                <a href="{{ route('register.step1') }}" class="donthave2">Registrasi disini</a>
             </div>   
             <div class="button">
                 <a href="/home" class="submit">Back</a>

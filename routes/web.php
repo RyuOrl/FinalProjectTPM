@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\UniqueController;
 use App\Http\Controllers\ProfileController;
 
 /*
@@ -38,6 +39,8 @@ Route::get('/admin/panel', [AdminController::class, 'adminPanel'])
 
 
 require __DIR__.'/auth.php';
+
+
 
 
 

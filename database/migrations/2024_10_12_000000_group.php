@@ -13,10 +13,9 @@ return new class extends Migration
     {
         Schema::create('groups', function (Blueprint $table) {
             $table->id();
-            $table->string('group');
-            $table->string('password')->unique();
+            $table->string('group')->unique();
+            $table->string('password');
             $table->enum('status', ['binusian', 'non-binusian']);
-            $table->foreignId('leader_id')->unique()->nullable();
             $table->enum('role', ['user', 'admin'])->default('user');
             $table->rememberToken();
             $table->timestamps();

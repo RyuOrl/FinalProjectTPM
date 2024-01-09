@@ -3,7 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Leader extends Model
@@ -12,8 +12,8 @@ class Leader extends Model
     protected $guarded = [];
 
 
-    public function task(): HasOne
+    public function user(): BelongsTo
     {
-        return $this->hasOne(Leader::class);
+        return $this->belongsTo(User::class, 'group_id');
     }
 }
