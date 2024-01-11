@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+
  * {
      margin: 0;
      padding: 0;
@@ -23,6 +24,8 @@
    background-position: center;
    background-repeat: no-repeat;
    background-position: bottom right;
+   background-attachment: fixed;
+   margin-bottom: 30px;
  }
 
  .main {
@@ -48,7 +51,7 @@
    margin-top: px;
    color: #FFFFFF;
    max-width: 734px;
-   max-height: 764px;
+   max-height: auto;
    width: 100%;
    padding: 30px 60px 60px 60px;
    border-radius: 45px;
@@ -73,7 +76,7 @@
  .garis {
    width: 462px;
    height: 2.5px;
-   background-color: #352DEB;
+   background-color: #FFFFFF;
  }
 
  .lingkaran1 {
@@ -86,7 +89,7 @@
 .lingkaran2 {
    width: 30px;
    height: 30px;
-   background-color: #352DEB;
+   background-color: #FFFFFF;
    border-radius: 50%;
 }
 
@@ -173,7 +176,10 @@ input[type="radio"]:checked + label:before {
    margin-top: 40px;
 }
 
-#sub {
+#nextBtn {
+   margin-left: 250px;
+}
+#submitBtn {
    margin-left: 250px;
 }
 
@@ -185,8 +191,102 @@ input[type="radio"]:checked + label:before {
    padding: 10px 40px;
    border-radius: 50px;
    border: 3px solid white;
+   background-color: transparent;
 }
 
 .submit:hover{
    background: linear-gradient(to bottom, #FFFFFF33 20%, #352DEB1A 100%);
+}
+
+.donthave {
+   display: flex;
+   font-size: 12px;
+   font-weight: 300;
+   justify-content: center;
+   padding: 20px;
+   
+}
+
+.donthave2 {
+   color: #FFFFFF;
+   padding: 0px 3px;
+   cursor: pointer;
+   text-decoration: underline
+}
+
+.donthave2:hover {
+   color: #555;
+}
+
+.input-box {
+   position: relative;
+}
+
+.input-box .far {
+   position: absolute;
+   right: 15px;
+   top: 60%;
+   cursor: pointer;
+   z-index: 1;
+}
+.input-box .icon {
+  position: absolute;
+  right: 15px;
+  top: 55%;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.input-box .up {
+  position: absolute;
+  right: 15px;
+  top: 42%;
+  cursor: pointer;
+  z-index: 1;
+}
+
+
+input[type="password"]::-ms-reveal {display : none ;}
+
+input[type="file"]{
+  color: #FFFFFF;
+  height: 45px;
+  width: 45px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  padding-left: 15px;
+  background: transparent
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+
+/* Styling for the file input button */
+input[type=file]::file-selector-button {
+  font-size: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  border: none;
+  background: linear-gradient(to bottom, #FFFFFF33 20%, #352DEB1A 100%);
+  padding: 5px 15px;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  border: 1px solid white;
+}
+
+input[type=file]::file-selector-button:hover {
+  background: #060A06;
+  color: #ccc;
+}
+
+.format {
+  font-size: 12px;
+  margin-left: 20px;
 }

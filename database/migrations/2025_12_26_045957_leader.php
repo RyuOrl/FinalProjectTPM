@@ -17,12 +17,11 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->string('whatsapp_number')->unique();
             $table->string('line_id')->unique();
-            $table->string('github_id');
+            $table->string('github_id')->nullable();
             $table->string('birth_place');
             $table->date('birth_date');
             $table->string('cv_path');
-            $table->string('flazz_card_path')->nullable(); //yang ini gmn gais, 
-            $table->string('id_card_path')->nullable();
+            $table->string('card_path'); //yang ini gmn gais, 
             $table->unsignedBigInteger('group_id');
             $table->rememberToken();
             $table->timestamps();

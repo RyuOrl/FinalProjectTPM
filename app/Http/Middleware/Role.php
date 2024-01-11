@@ -15,9 +15,16 @@ class Role
      */
     public function handle(Request $request, Closure $next, $role): Response
     {
-        if($request->user()->role !== $role){
-            return redirect('/dashboard');
+
+
+        if($request->user()->role !== $role ){ 
+          if(!$request->user()){ //kalo role tidak ada, maka redirect ke home
+            return redirect('/home');
+          }else {//kalo role ada, redirect ke user dashboard
+            return redirect('/user/dashboard');
         }
+    }
+            
         return $next($request);
     }
 }

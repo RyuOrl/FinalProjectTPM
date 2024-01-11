@@ -20,90 +20,46 @@ class RegisteredUserController extends Controller
     /**
      * Display the registration view.
      */
-    public function createStep1(): View
+    public function create(): View
     {
-        return view('auth.register_step1');
+        return view('auth.register');
     }
 
-    public function createStep2(): View
-    {
-        return view('auth.register_step2');
-    }
-
-
-    /**
-     * Handle an incoming registration request.
-     *
-     * @throws \Illuminate\Validation\ValidationException
-     */
-
-
-    public function storeStep1(Request $request)
+    public function store(Request $request)
     {
         $request->validate([
-            'group' => 'unique:groups,group'
+            'group' => 'unique:groups,group',
+            'email' => 'unique:leaders,email',
+            'whatsapp_number' => 'unique:leaders,whatsapp_number',
+            'line_id' => 'unique:leaders,line_id',
+
         ]);
-
-        $data = $request->only([
-            'group',
-            'password',
-            'confirm_password', 
-            'status'
-        ]);
-    
-
-        $request->session()->put('register1', $data);
-        return redirect(route('register.step2'));
-    }
-
-
-    public function storeStep2(Request $request)
-    {
-        $data1 = $request->session()->get('register1');
-
-        $dataAll = $request->validate([
-            'full_name' => ['required', 'string'],
-            'email' => ['required', 'email', 'unique:leaders,email'],
-            'whatsapp_number' => ['required',
-                                'unique:leaders,whatsapp_number',
-                                'numeric',
-                                'min:9'],
-            'line_id' => ['required', 'unique:leaders,line_id'],
-            'github_id'=> ['required'],
-            'birth_place' => ['required', 'date'],
-            'birth_date' => ['required', 'before_or_equal:' . now()->subYears(17)->format('Y-m-d'),],
-            'cv_path' => ['required', 'mimes:pdf,jpg,jpeg,png'],
-        ]);
-
-        $dataFlazzorID = '';
-        if($data1['status']==='binusian'){
-            $dataFlazzorID = $request->validate([
-                'flazz_card_path' => ['required', 'mimes:pdf,jpg,jpeg,png'],
-            ]);
-        }elseif($data1['status']==='non-binusian'){
-            $dataFlazzorID = $request->validate([
-                'id_card_path' => ['required', 'mimes:pdf,jpg,jpeg,png'],
-            ]);
-        }
 
         $group = User::create([
-            'group' => $data1['group'],
-            'password' => Hash::make($data1['password']),
-            'status' => $data1['status'],
+            'group' => $request->group,
+            'password' => Hash::make($request->password),
+            'status' => $request->status,
         ]);
-
-        $leader = Leader::create([
-            $dataAll,
-            $dataFlazzorID,
-            'group_id' => $group->id,
-        ]);
-
-        $request->session()->forget('register.step1');
+        
+            $leader = Leader::create([
+                'full_name' => $request->full_name,
+                'email' => $request->email,
+                'whatsapp_number' => $request->whatsapp_number,
+                'line_id' => $request->line_id,
+                'github_id'=> $request->github_id,
+                'birth_place' => $request->birth_place,
+                'birth_date' => $request->birth_date,
+                'cv_path' => $request->cv_path, //bisa flazz bisa id
+                'card_path' => $request->card_path,
+                'group_id' => $group->id,
+            ]);
+        
 
         event(new Registered([$group, $leader]));
 
         Auth::login($group);
 
-        return redirect('/dashboard');
+        return redirect('/user/dashboard');
     }
 }
+

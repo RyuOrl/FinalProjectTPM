@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\UniqueController;
 use App\Http\Controllers\ProfileController;
 
@@ -16,9 +17,7 @@ use App\Http\Controllers\ProfileController;
 |
 */
 
-Route::get('/' , function () {
-    return view('home'); // Choose either 'landing' or 'welcome'
-});
+Route::get('/', [AuthenticatedSessionController::class, 'redirect']);
 
 Route::get('/home', function(){
     return view('home');
