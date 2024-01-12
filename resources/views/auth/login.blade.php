@@ -48,7 +48,7 @@
             </div>
         </form>
 </div>
-<script src="{{ asset('assets/js/login_validation.js') }}"></script>
+<script src="{{ asset('assets/js/login.js') }}"></script>
 <script src="{{ asset('assets/js/hide_password_login.js') }}"></script>
 </body>
 </html>

@@ -36,7 +36,7 @@
                     <input oninput="checkGroup();" id="group"  name="group"  type="text" placeholder="Masukkan nama group" 
                     value="{{ old('group') }}" required>
                     @error('group')
-                    <p style="color:red" >Nama grup harus unik</p>
+                    <p style="color:red" >Nama grup telah diambil.</p>
                     @enderror
                       <p style="color:red" id="group_error"></p>
                 </div>
@@ -82,17 +82,26 @@
                     <span class="details">Email</span>
                     <input id="email" oninput="checkEmail();" name="email" type="email" placeholder="Masukkan Email" value="{{ old('email') }}"
                     required >
+                    @error('email')
+                    <p style="color:red" >Email telah diambil.</p>
+                    @enderror
                     <p style="color:red" id="email_error"></p>
                 </div>
                 <div class="input-box">
                     <span class="details">Nomor Whatsapp</span>
                     <input id="whatsapp_number" oninput="checkWhatsappNumber();" name="whatsapp_number" type="text" placeholder="Masukkan Nomor Whatsapp" value="{{ old('whatsapp_number') }}" required>
+                    @error('whatsapp_number')
+                    <p style="color:red" >Nomor WhatsApp telah diambil.</p>
+                    @enderror
                     <p style="color:red" id="whatsapp_number_error"></p>
                 </div>
                 <div class="input-box">
                     <span class="details">Line ID</span>
                     <input id="line_id" oninput="checkLineId();" name="line_id" type="text" placeholder="Masukkan Line ID" value="{{ old('line_id') }}"
                     required>
+                    @error('line_id')
+                    <p style="color:red" >Line ID telah diambil.</p>
+                    @enderror
                     <p style="color:red" id="line_id_error"></p>
                 </div>
                 <div class="input-box">

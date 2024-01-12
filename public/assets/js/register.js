@@ -1,9 +1,9 @@
 var currentTab = 0;
 document.addEventListener("DOMContentLoaded", function(event) {
-  // var savedStep = localStorage.getItem("currentStep");
-  // if (savedStep !== null && !isNaN(savedStep)) {
-  //   currentTab = parseInt(savedStep);
-  // }
+  var savedStep = localStorage.getItem("currentStep");
+  if (savedStep !== null && !isNaN(savedStep)) {
+    currentTab = parseInt(savedStep);
+  }
 
             showTab(currentTab);
             
@@ -29,6 +29,7 @@ function getStatus() {
             function showTab(n) {
            
               var x = document.getElementsByClassName("user-detail");
+
               if(n===2){
                 return true;
               }
@@ -46,6 +47,7 @@ function getStatus() {
                 document.querySelector('.title1').innerHTML= "Leader Information";
                 document.getElementById("submitBtn").style.display = "inline";
                 document.getElementById("nextBtn").style.display = "none";
+                restore2();
                 if(status == 'binusian'){
                   document.getElementById("card").innerHTML = "Upload Flazz Card";
           
@@ -60,12 +62,65 @@ function getStatus() {
                 document.querySelector('.title1').innerHTML= "Group Information";
                 document.getElementById("submitBtn").style.display = "none";
                 document.getElementById("nextBtn").style.display = "inline";
+                restore1();
               }
           
           
-              // localStorage.setItem("currentStep", n.toString());
+              localStorage.setItem("currentStep", n.toString());
               
             
+            }
+
+            function save1(){
+              var input1 = {
+                group : document.getElementById('group').value,
+                password : document.getElementById('password').value,
+                confirm_password : document.getElementById('confirm_password').value,
+                status : getStatus(),
+            };
+            localStorage.setItem('data1', JSON.stringify(input1));
+
+            }
+
+            function save2(){
+              var input2 = {
+                full_name : document.getElementById('full_name').value,
+                email : document.getElementById('email').value,
+                whatsapp_number : document.getElementById('whatsapp_number').value,
+                line_id : document.getElementById('line_id').value,
+                github_id : document.getElementById('github_id').value,
+                birth_place : document.getElementById('birth_place').value,
+                birth_date : document.getElementById('birth_date').value,
+                cvUpload : document.getElementById('cvUpload').value,
+                cardUpload : document.getElementById('cardUpload').value,
+
+            };
+            localStorage.setItem('data2', JSON.stringify(input2));
+
+            }
+
+            function restore1(){
+              var saved1 = JSON.parse(localStorage.getItem('data1'));
+            document.getElementById('group').value = saved1.group;
+            document.getElementById('password').value = saved1.password;
+            document.getElementById('confirm_password').value = saved1.confirm_password;
+            document.getElementById('binusian').checked = saved1.status === 'binusian';
+            document.getElementById('nonbinusian').checked = saved1.status === 'non-binusian';
+
+            }
+
+            function restore2(){
+              var saved2 = JSON.parse(localStorage.getItem('data2'));
+            document.getElementById('full_name').value = saved2.full_name;
+            document.getElementById('email').value = saved2.email;
+            document.getElementById('whatsapp_number').value = saved2.whatsapp_number;
+            document.getElementById('line_id').value = saved2.line_id;
+            document.getElementById('github_id').value = saved2.github_id;
+            document.getElementById('birth_place').value = saved2.birth_place;
+            document.getElementById('birth_date').value = saved2.birth_date;
+            document.getElementById('cvUpload').value = saved2.cvUpload;
+            document.getElementById('cardUpload').value = saved2.cardUpload;
+
             }
             
 
@@ -73,6 +128,12 @@ function getStatus() {
               var x = document.getElementsByClassName("user-detail");
               if (n == 1 && !validateForm()) {
                 return false;
+              }
+
+              if(currentTab === 0){
+                save1();
+              }else if(currentTab===1){
+                save2();
               }
           
               if (currentTab === 0 && n === -1) {
@@ -85,41 +146,13 @@ function getStatus() {
           
               if (currentTab >= x.length) {
                   document.getElementById("nextprevious").style.display = "none";
-                  return false; // prevent form submission
+                  return false; 
               }
           
               showTab(currentTab);
           }
 
 
-          
-          
-          
-          
-//           var full_name_error = document.getElementById('full_name_error');
-// var email_error = document.getElementById('email_error');
-// var whatsapp_number_error = document.getElementById('whatsapp_number_error');
-// var line_id_error = document.getElementById('line_id_error');
-// var birth_place_error = document.getElementById('birth_place_error');
-// var birth_date_error = document.getElementById('birth_date_error');
-// var cv_path_error = document.getElementById('cv_path_error');
-// var flazz_card_path_error = document.getElementById('flazz_card_path_error');
-// var id_card_path_error = document.getElementById('id_card_path_error');
-          
-          
-          
-          
-         
-          
-//           var full_name = document.register_form.full_name;
-// var email = document.register_form.email;
-// var whatsapp_number = document.register_form.whatsapp_number;
-// var line_id = document.register_form.line_id;
-// var birth_place = document.register_form.birth_place;
-// var birth_date = document.register_form.birth_date;
-// var cv_path = document.register_form.cv_path;
-// var flazz_card_path = document.register_form.flazz_card_path;
-// var id_card_path = document.register_form.id_card_path;
           
 function checkGroup() {
  
@@ -356,6 +389,7 @@ function checkCardPath(){
             else if(currentTab===1 && checkFullName() && checkEmail() && 
             checkWhatsappNumber() && checkLineId() && checkGithubId() && 
             checkBirthPlace() && checkBirthDate() && checkCardPath()){
+              localStorage.clear();
               return true;
 
             }
