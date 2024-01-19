@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Models\User;
 use Illuminate\View\View;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\RedirectResponse;
 use App\Providers\RouteServiceProvider;
 use App\Http\Requests\Auth\LoginRequest;
@@ -42,23 +44,28 @@ class AuthenticatedSessionController extends Controller
     public function store(LoginRequest $request): RedirectResponse
     {
 
-        $request->validate([
-            'group' => Rule::exists('groups', 'group'),
-        ]);
 
+        $user = User::where('group', $request->group)->first();
+        if ($user && Hash::check($request->password, $user->password)) {
+            $request->authenticate();
 
-        $request->authenticate();
+            $request->session()->regenerate();
 
-        $request->session()->regenerate();
-        
-        $url = '';
-        if($request->user()->role === 'admin'){
-            $url = '/admin/panel';
-        }elseif($request->user()->role === 'user'){
-            $url = '/user/dashboard';
+            $url = '';
+            if ($request->user()->role === 'admin') {
+                $url = '/admin/panel';
+            } elseif ($request->user()->role === 'user') {
+                $url = '/user/dashboard';
+            }
+
+            return redirect($url);
         }
- 
-        return redirect($url);
+        if($user){
+            return back()->withErrors(['group' => 'Password salah']);
+        }else{
+            return back()->withErrors(['group' => 'Nama Group tidak ditemukan']);
+        }
+        
     }
 
     /**

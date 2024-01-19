@@ -5,17 +5,22 @@ var group = document.login_form.group;
 var password = document.login_form.password;
 
 
-function checkGroup() {
-  if (group.value.trim() === '') {
-      group_error.innerHTML = "Nama group harus diisi.";
-      return false;
-  } else {
-      group_error.innerHTML = ""; // Clear any previous error message
-      return true;
+function checkGroup(){
+  saveName();
+  if(group.value.trim() === ""){
+    group_error.innerHTML = "Nama Group harus diisi.";
+    return false;
+  }else {
+    group_error.innerHTML = "";
+    return true;
   }
-}
-function checkPassword() {
   
+}
+ 
+
+
+function checkPassword() {
+  savePass();
   if(password.value.trim() === ''){
     password_error.innerHTML = "Password harus diisi.";
     return false;
@@ -27,17 +32,16 @@ function checkPassword() {
 }
 
 
+
+
+
 function validateForm() {
-  var isGroupValid = checkGroup();
-  var isPasswordValid = checkPassword();
-
-
-  // Jika semua validasi berhasil, izinkan pengiriman formulir
-  if (isGroupValid && isPasswordValid) {
-    // ... lanjutkan dengan pengiriman formulir atau aksi lainnya
+ 
+  if (checkGroup() && checkPassword()) {
+ 
     return true;
   } else {
-    // Jika ada setidaknya satu validasi yang gagal, hentikan pengiriman formulir
+   
     return false;
   }
 }

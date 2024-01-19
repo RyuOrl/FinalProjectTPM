@@ -89,7 +89,7 @@ form .user-detail .input-box .details {
 
 .donthave {
     display: flex;
-    font-size: 12px;
+    font-size: 16px;
     font-weight: 300;
     justify-content: center;
     padding: 20px;
@@ -101,6 +101,7 @@ form .user-detail .input-box .details {
     padding: 0px 3px;
     cursor: pointer;
     text-decoration: underline
+    
 }
 
 .donthave2:hover {

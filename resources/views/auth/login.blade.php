@@ -19,16 +19,14 @@
     <div class="container">
         <div class="title">Log In</div>
 
-        <form name="login_form" action="{{ route('login') }}" method="POST">
+        <form onsubmit="return validateForm();" name="login_form" action="{{ route('login') }}" method="POST">
             @csrf
             <div class="user-detail">
                 <div class="input-box">
                     <span class="details">Nama Group</span>
-                    <input oninput="checkGroup();" id="group" value="{{ old('group') }}" name="group" type="text" placeholder="Masukkan nama group" required >
+                    <input oninput="checkGroup();" id="group" name="group" type="text" placeholder="Masukkan nama group" required >
                     <p style="color:red" id="group_error"></p>
-                    @error('group')
-                        <p style="color:red">Nama group tidak ditemukan</p>
-                    @enderror
+                  
                 </div>
                 <div class="input-box">
                     <span class="details">Password</span>
@@ -36,6 +34,10 @@
                     <span><i id="toggler"class="far fa-eye"></i></span>
                     <p style="color:red" id="password_error"></p>
                 </div>
+                @error ('group')
+                <p style="color: red"> {{ $message}}</p>
+                @enderror
+
             </div>
 
             <div class="donthave">

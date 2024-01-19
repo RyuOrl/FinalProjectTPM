@@ -48,10 +48,10 @@ function getStatus() {
                 document.getElementById("submitBtn").style.display = "inline";
                 document.getElementById("nextBtn").style.display = "none";
                 restore2();
-                if(status == 'binusian'){
+                if(status === 'binusian'){
                   document.getElementById("card").innerHTML = "Upload Flazz Card";
           
-                }else if(status == 'non-binusian'){
+                }else if(status === 'non-binusian'){
                   document.getElementById("card").innerHTML = "Upload ID Card";
                   
                 }
@@ -153,19 +153,26 @@ function getStatus() {
           }
 
 
+          function checkGroup(){
+
+            var group_error = document.getElementById('group_error');
+            var group = document.register_form.group;
           
-function checkGroup() {
- 
-  var group_error = document.getElementById('group_error');
-  var group = document.register_form.group;
-  if (group.value.trim() === '') {
-      group_error.innerHTML = "Nama group harus diisi.";
-      return false;
-  } else {
-      group_error.innerHTML = ""; // Clear any previous error message
-      return true;
-  }
-}
+            $.post('/api/check-group', { group: group.value }, function (response) {
+              if (response.exists) {
+                  group_error.innerText = 'Nama Group telah diambil.';
+              }else{
+                group_error.innerHTML = "";
+              }
+          });
+           if(group.value.trim() === ""){
+                group_error.innerHTML = "Nama Group harus diisi.";
+                return false;
+              }else {
+                group_error.innerHTML = "";
+                return true;
+              }
+            }
 
 function checkPassword() {
 
@@ -235,6 +242,8 @@ function checkStatus(){
 }
 
 
+
+
 function checkFullName(){
  
   var full_name_error = document.getElementById('full_name_error');
@@ -254,6 +263,12 @@ function checkEmail(){
 
   var email_error = document.getElementById('email_error');
   var email = document.register_form.email;
+
+  $.post('/api/check-email', { email: email.value }, function (response) {
+    if (response.exists) {
+        email_error.innerText = 'Email telah diambil.';
+    }
+});
   if (/^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/.test(email.value))
      {
       email_error.innerHTML = "";
@@ -271,6 +286,13 @@ function checkEmail(){
   function checkWhatsappNumber(){
     var whatsapp_number_error = document.getElementById('whatsapp_number_error');
     var whatsapp_number = document.register_form.whatsapp_number;
+ 
+    $.post('/api/check-whatsapp-number', { whatsapp_number: whatsapp_number.value }, function (response) {
+      if (response.exists) {
+          whatsapp_number_error.innerText = 'Nomor WhatsApp telah diambil.';
+          
+      }
+  });
     if(/^\d{9,}$/.test(whatsapp_number.value)){
       whatsapp_number_error.innerHTML = "";
       return true;
@@ -286,10 +308,18 @@ function checkEmail(){
   function checkLineId(){
     var line_id_error = document.getElementById('line_id_error');
     var line_id = document.register_form.line_id;
+
+    $.post('/api/check-line-id', { line_id: line_id.value }, function (response) {
+      if (response.exists) {
+          line_id_error.innerText = 'Line ID telah diambil.';
+         
+      }
+  });
     if(line_id.value.trim() === ""){
       line_id_error.innerHTML = "Line ID harus diisi."
       return false;
-    }else{
+    }
+    else{
       line_id_error.innerHTML = "";
       return true;
     }
