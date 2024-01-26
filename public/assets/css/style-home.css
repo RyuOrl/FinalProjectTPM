@@ -53,6 +53,12 @@ nav {
     margin-left: 900px;
 }
 
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
 .login-button::before {
     content: '';
     position: absolute;
@@ -113,6 +119,9 @@ nav {
     margin-top: 80px;
 }
 
+.lets1:hover{
+    background-color: grey;
+}
 .lets1 {
     background: linear-gradient(to bottom, #FFFFFF33 20%, #352DEB1A 100%);
     border: none;

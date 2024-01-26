@@ -40,18 +40,19 @@
                     @enderror
                       <p style="color:red" id="group_error"></p>
                 </div>
+                <div>
                 <div class="input-box">
                     <span class="details">Password</span>
                     <input class="password-input" oninput="checkPassword();" id="password" name="password"  type="password" placeholder="Buat password"  
                     value="{{ old('password') }}"  autocomplete="new-password" required>
                     <span><i class="toggle-password far fa-eye"></i></span>
-                    <p style="color:red" id="password_error"></p>
                 </div>
+                <p style="color:red" id="password_error"></p>
+            </div>
                 <div class="input-box">
                     <span class="details">Konfirmasi Password</span>
                     <input class="password-input" oninput="checkConfirmPassword();" id="confirm_password" name="confirm_password"  type="password" placeholder="Konfirmasi password" value="{{ old('confirm_password') }}" 
                     required>
-                    <span><i class="toggle-password far fa-eye"></i></span>
                     <p style="color:red" id="confirm_password_error"></p>
                 </div>
                 <div class="binusian-details">
@@ -116,28 +117,34 @@
                     required>
                     <p style="color:red" id="birth_place_error"></p>
                 </div>
+                <div>
                 <div class="input-box">
                     <span class="details">Tanggal Lahir</span>
                     <input id="birth_date" oninput="checkBirthDate();" name="birth_date" type="date" placeholder="Masukkan Tanggal Lahir" value="{{ old('birth_date') }}"
                     required>
                     <i data-feather="calendar" class="icon"></i>
-                    <p style="color:red" id="birth_date_error"></p>
                 </div>
+                <p style="color:red" id="birth_date_error"></p>
+            </div>
+            <div>
                 <div class="input-box">
                     <span class="details">Upload CV</span>
                     <input oninput="checkCvPath();" name="cv_path" type="file" id="cvUpload" class="upload" required>
                     <i data-feather="upload-cloud" class="up" onclick="triggerFileInput('cvUpload')"></i>
-                    <p style="color:red" id="cv_path_error"></p>
                     <span for="" class="format">*File formats: .pdf, .jpg, .jpeg and .png</span>
                 </div>
+                <p style="color:red" id="cv_path_error"></p>
+            </div>
                 <div id="flazz">
+                <div>
                 <div class="input-box">
                     <span id="card" class="details">Upload Flazz Card</span>
                     <input oninput="checkCardPath();" name="card_path" type="file" id="cardUpload" class="upload" required>
                     <i data-feather="upload-cloud" class="up" onclick="triggerFileInput('cardUpload')"></i>
-                    <p style="color:red" id="card_path_error"></p>
                     <span for="" class="format">*File formats: .pdf, .jpg, .jpeg and .png</span>
                 </div>
+                <p style="color:red" id="card_path_error"></p>
+            </div>
             </div>
                
      

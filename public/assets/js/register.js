@@ -161,8 +161,6 @@ function getStatus() {
             $.post('/api/check-group', { group: group.value }, function (response) {
               if (response.exists) {
                   group_error.innerText = 'Nama Group telah diambil.';
-              }else{
-                group_error.innerHTML = "";
               }
           });
            if(group.value.trim() === ""){
@@ -365,8 +363,10 @@ function checkEmail(){
     var date = new Date(new_birth_date);
 
     var today = new Date();
-    var age = today.getFullYear() - date.getFullYear();
-    if (age < 17) {
+    var year = today.getFullYear() - date.getFullYear();
+
+    if (year < 17 || (year==17 && today.getMonth() < date.getMonth()) || (year==17 && today.getMonth() == date.getMonth() && today.getDate() < date.getDate())) {
+      console.log(date.getMonth(), "monthnya",date.getDate(), "tanggalnya" );
         birth_date_error.innerHTML = "Umur peserta harus minimal 17 tahun." ;
         return false;
     }
