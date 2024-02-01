@@ -89,10 +89,11 @@ form .user-detail .input-box .details {
 
 .donthave {
     display: flex;
+    margin-top: 40px;
     font-size: 16px;
     font-weight: 300;
     justify-content: center;
-    padding: 20px;
+    padding: 9px;
     
  }
 

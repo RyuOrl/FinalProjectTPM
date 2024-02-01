@@ -6,8 +6,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
   }
 
             showTab(currentTab);
-            
-            
+  
+
+     if ((JSON.parse(localStorage.getItem('data1')) && currentTab===0) || 
+     (JSON.parse(localStorage.getItem('data2')) && currentTab===1)) {
+    validateForm();
+  }
+  
+  
 });
 
 
@@ -407,23 +413,37 @@ function checkCardPath(){
   }
 } 
 
-
+function shakeElement(elementId) {
+  const element = document.getElementById(elementId);
+  element.classList.add('error-shake');
+  setTimeout(() => {
+    element.classList.remove('error-shake');
+  }, 300); // Sesuaikan dengan durasi animasi getaran (dalam milidetik)
+}
 
  
           function validateForm(){
         
-            if(currentTab===0 && checkGroup() && checkPassword() && checkConfirmPassword() && checkStatus()){
-              
+            var groupErrorElement = document.getElementById("group_error");
+            var emailErrorElement = document.getElementById("email_error");
+            var whatsappNumberErrorElement = document.getElementById("whatsapp_number_error");
+            var lineIdErrorElement = document.getElementById("line_id_error");
+          
+            var groupErrorMessage = groupErrorElement ? groupErrorElement.textContent : "";
+            var emailErrorMessage = emailErrorElement ? emailErrorElement.textContent : "";
+            var whatsappNumberErrorMessage = whatsappNumberErrorElement ? whatsappNumberErrorElement.textContent : "";
+            var lineIdErrorMessage = lineIdErrorElement ? lineIdErrorElement.textContent : "";
+          
+            if (currentTab === 0 && checkGroup() && checkPassword() && checkConfirmPassword() && checkStatus() && groupErrorMessage === "") {
               return true;
-            }
-            else if(currentTab===1 && checkFullName() && checkEmail() && 
-            checkWhatsappNumber() && checkLineId() && checkGithubId() && 
-            checkBirthPlace() && checkBirthDate() && checkCardPath()){
+            } else if (currentTab === 1 && checkFullName() && checkEmail() &&
+              checkWhatsappNumber() && checkLineId() && checkGithubId() &&
+              checkBirthPlace() && checkBirthDate() && checkCardPath() && emailErrorMessage === "" &&
+              whatsappNumberErrorMessage === "" && lineIdErrorMessage === "") {
               localStorage.clear();
               return true;
-
-            }
-            else{
+            } else {
+              shakeElement('screen');
               return false;
             }
           }

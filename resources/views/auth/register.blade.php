@@ -17,7 +17,7 @@
         <div>THON</div>
     </section>
 
-    <div class="container">
+    <div id="screen" class="container">
         <div class="title">Registrasi</div>
         
         <div class="asset">
@@ -34,7 +34,7 @@
                 <div class="input-box">
                     <span class="details">Nama Group</span>
                     <input oninput="checkGroup();" id="group"  name="group"  type="text" placeholder="Masukkan nama group" 
-                    value="{{ old('group') }}" required>
+                    value="{{ old('group') }}" >
                     @error('group')
                     <p style="color:red" >Nama grup telah diambil.</p>
                     @enderror
@@ -44,7 +44,7 @@
                 <div class="input-box">
                     <span class="details">Password</span>
                     <input class="password-input" oninput="checkPassword();" id="password" name="password"  type="password" placeholder="Buat password"  
-                    value="{{ old('password') }}"  autocomplete="new-password" required>
+                    value="{{ old('password') }}"  autocomplete="new-password" >
                     <span><i class="toggle-password far fa-eye"></i></span>
                 </div>
                 <p style="color:red" id="password_error"></p>
@@ -52,7 +52,7 @@
                 <div class="input-box">
                     <span class="details">Konfirmasi Password</span>
                     <input class="password-input" oninput="checkConfirmPassword();" id="confirm_password" name="confirm_password"  type="password" placeholder="Konfirmasi password" value="{{ old('confirm_password') }}" 
-                    required>
+                    >
                     <p style="color:red" id="confirm_password_error"></p>
                 </div>
                 <div class="binusian-details">
@@ -76,13 +76,13 @@
                 <div class="input-box">
                     <span class="details">Nama Lengkap</span>
                     <input id="full_name" oninput="checkFullName();" name="full_name" type="text" placeholder="Masukkan Nama Lengkap" value="{{ old('full_name') }}"
-                    required>
+                    >
                     <p style="color:red" id="full_name_error"></p>
                 </div>
                 <div class="input-box">
                     <span class="details">Email</span>
                     <input id="email" oninput="checkEmail();" name="email" type="email" placeholder="Masukkan Email" value="{{ old('email') }}"
-                    required >
+                     >
                     @error('email')
                     <p style="color:red" >Email telah diambil.</p>
                     @enderror
@@ -90,7 +90,7 @@
                 </div>
                 <div class="input-box">
                     <span class="details">Nomor Whatsapp</span>
-                    <input id="whatsapp_number" oninput="checkWhatsappNumber();" name="whatsapp_number" type="text" placeholder="Masukkan Nomor Whatsapp" value="{{ old('whatsapp_number') }}" required>
+                    <input id="whatsapp_number" oninput="checkWhatsappNumber();" name="whatsapp_number" type="text" placeholder="Masukkan Nomor Whatsapp" value="{{ old('whatsapp_number') }}" >
                     @error('whatsapp_number')
                     <p style="color:red" >Nomor WhatsApp telah diambil.</p>
                     @enderror
@@ -99,7 +99,7 @@
                 <div class="input-box">
                     <span class="details">Line ID</span>
                     <input id="line_id" oninput="checkLineId();" name="line_id" type="text" placeholder="Masukkan Line ID" value="{{ old('line_id') }}"
-                    required>
+                    >
                     @error('line_id')
                     <p style="color:red" >Line ID telah diambil.</p>
                     @enderror
@@ -108,20 +108,20 @@
                 <div class="input-box">
                     <span class="details">Github/Gitlab ID</span>
                     <input id="github_id" oninput="checkGithubId();" name="github_id" type="text" placeholder="Masukkan Github/Gitlab ID" value="{{ old('github_id') }}" 
-                    required>
+                    >
                     <p style="color:red" id="github_id_error"></p>
                 </div>
                 <div class="input-box">
                     <span class="details">Tempat Lahir</span>
                     <input id="birth_place" oninput="checkBirthPlace();" name="birth_place" type="text" placeholder="Masukkan Tempat Lahir" value="{{ old('birth_place') }}"
-                    required>
+                    >
                     <p style="color:red" id="birth_place_error"></p>
                 </div>
                 <div>
                 <div class="input-box">
                     <span class="details">Tanggal Lahir</span>
                     <input id="birth_date" oninput="checkBirthDate();" name="birth_date" type="date" placeholder="Masukkan Tanggal Lahir" value="{{ old('birth_date') }}"
-                    required>
+                    >
                     <i data-feather="calendar" class="icon"></i>
                 </div>
                 <p style="color:red" id="birth_date_error"></p>
@@ -129,7 +129,7 @@
             <div>
                 <div class="input-box">
                     <span class="details">Upload CV</span>
-                    <input oninput="checkCvPath();" name="cv_path" type="file" id="cvUpload" class="upload" required>
+                    <input oninput="checkCvPath();" name="cv_path" type="file" id="cvUpload" class="upload" >
                     <i data-feather="upload-cloud" class="up" onclick="triggerFileInput('cvUpload')"></i>
                     <span for="" class="format">*File formats: .pdf, .jpg, .jpeg and .png</span>
                 </div>
@@ -139,7 +139,7 @@
                 <div>
                 <div class="input-box">
                     <span id="card" class="details">Upload Flazz Card</span>
-                    <input oninput="checkCardPath();" name="card_path" type="file" id="cardUpload" class="upload" required>
+                    <input oninput="checkCardPath();" name="card_path" type="file" id="cardUpload" class="upload" >
                     <i data-feather="upload-cloud" class="up" onclick="triggerFileInput('cardUpload')"></i>
                     <span for="" class="format">*File formats: .pdf, .jpg, .jpeg and .png</span>
                 </div>

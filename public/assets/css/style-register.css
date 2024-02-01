@@ -290,3 +290,19 @@ input[type=file]::file-selector-button:hover {
   font-size: 12px;
   margin-left: 20px;
 }
+
+.error-shake {
+   animation: shake 0.3s;
+ }
+
+ @keyframes shake {
+   0%, 100% {
+     transform: translateX(0);
+   }
+   20%, 60%, 80% {
+     transform: translateX(-10px);
+   }
+   40%, 100% {
+     transform: translateX(10px);
+   }
+ }

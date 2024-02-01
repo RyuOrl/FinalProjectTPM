@@ -24,13 +24,13 @@
             <div class="user-detail">
                 <div class="input-box">
                     <span class="details">Nama Group</span>
-                    <input oninput="checkGroup();" id="group" name="group" type="text" placeholder="Masukkan nama group" required >
+                    <input oninput="checkGroup();" id="group" name="group" type="text" placeholder="Masukkan nama group" autocomplete="off" required >
                     <p style="color:red" id="group_error"></p>
                   
                 </div>
                 <div class="input-box">
                     <span class="details">Password</span>
-                    <input oninput="checkPassword();" id="password" name="password" type="password" placeholder="Masukkan password" required >
+                    <input oninput="checkPassword();" id="password" name="password" type="password" placeholder="Masukkan password" autocomplete="off" required >
                     <span><i id="toggler"class="far fa-eye"></i></span>
                     <p style="color:red" id="password_error"></p>
                 </div>
