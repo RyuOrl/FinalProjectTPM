@@ -90,7 +90,7 @@ form .user-detail .input-box .details {
 .donthave {
     display: flex;
     margin-top: 40px;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 300;
     justify-content: center;
     padding: 9px;
@@ -147,3 +147,19 @@ form .user-detail .input-box .details {
 }
 
 input[type="password"]::-ms-reveal {display : none ;}
+
+.error-shake {
+    animation: shake 0.3s;
+  }
+ 
+  @keyframes shake {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    20%, 60%, 80% {
+      transform: translateX(-10px);
+    }
+    40%, 100% {
+      transform: translateX(10px);
+    }
+  }

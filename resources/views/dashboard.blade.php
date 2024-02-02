@@ -32,23 +32,23 @@
 
     <div class="container">
         <div class="container1">
-            <div class="title">Welcome, .....................</div>
+            <div class="title">Welcome, {{ $user->full_name }}</div>
     
-            <div class="title1">Information Leader</div>
+            <div class="title1">Leader Information</div>
     
             <ul class="list1">
-                <li>Nama Lengkap</li>
-                <li>Email</li>
-                <li>Nomor Whatsapp</li>
-                <li>LINE ID</li>
-                <li>Tempat Lahir</li>
-                <li>Tanggal Lahir</li>
+                <li>Nama Lengkap : {{ $user->full_name }}</li>
+                <li>Email : {{ $user->email }}</li>
+                <li>Nomor Whatsapp : {{ $user->whatsapp_number }}</li>
+                <li>LINE ID : {{ $user->line_id }}</li>
+                <li>Tempat Lahir : {{ $user->birth_place }}</li>
+                <li>Tanggal Lahir : {{ $user->birth_date }}</li>
             </ul>
         </div>
     
         <div class="container2">
             <div class="data">
-                <div class="title2">Informasi Data</div>
+                <div class="title2">Data Information</div>
 
                 <ul class="list2">
                     <li>CV</li>

@@ -68,6 +68,7 @@ function getStatus() {
                 document.querySelector('.title1').innerHTML= "Group Information";
                 document.getElementById("submitBtn").style.display = "none";
                 document.getElementById("nextBtn").style.display = "inline";
+                
                 restore1();
               }
           

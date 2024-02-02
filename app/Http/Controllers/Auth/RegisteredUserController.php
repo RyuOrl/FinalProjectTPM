@@ -53,7 +53,21 @@ class RegisteredUserController extends Controller
                 'card_path' => $request->card_path,
                 'group_id' => $group->id,
             ]);
-        
+
+            $cv_path = $request->file('cv_path');
+            $cv_file_name = $leader->id . $cv_path->getClientOriginalName();
+            $cv_path->storeAs('public/CV', $cv_file_name);
+            $leader->cv_path = 'CV/' . $cv_file_name;
+            $card_path = $request->file('card_path');
+                $card_file_name = $leader->id . $card_path->getClientOriginalName();
+            if($request->status == 'binusian'){
+                $card_path->storeAs('public/Flazz', $card_file_name);
+                $leader->card_path = 'Flazz/' . $card_file_name;
+            }else{
+                $card_path->storeAs('public/ID', $card_file_name);
+                $leader->card_path = 'ID/' . $card_file_name;
+            }
+            $leader->save();
 
         event(new Registered([$group, $leader]));
 

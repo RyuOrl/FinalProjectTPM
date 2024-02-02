@@ -1,10 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MailController;
 use App\Http\Controllers\AdminController;
-use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\UniqueController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Auth\AuthenticatedSessionController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,9 +25,7 @@ Route::get('/home', function(){
     return view('home');
 });
 
-Route::get('/user/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/user/dashboard',[UserController::class, 'read'])->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -35,6 +35,8 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/admin/panel', [AdminController::class, 'adminPanel'])
 ->middleware(['auth', 'role:admin'])->name('admin.panel');
+
+Route::post('/send/mail', [MailController::class, 'sendMail'])->name('send.mail');
 
 
 require __DIR__.'/auth.php';

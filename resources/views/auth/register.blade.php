@@ -28,7 +28,7 @@
 
         <div class="title1">Group Information</div>
         
-        <form action="{{ route('register') }}" onsubmit="return validateForm();" name="register_form"  method="POST">
+        <form action="{{ route('register') }}" onsubmit="return validateForm();" name="register_form"  method="POST" enctype="multipart/form-data">
           @csrf
             <div class="user-detail">
                 <div class="input-box">
@@ -56,7 +56,7 @@
                     <p style="color:red" id="confirm_password_error"></p>
                 </div>
                 <div class="binusian-details">
-                    <span class="title5">Binusian atau Non-Binusian</span>
+                    <span class="title5">Status</span>
                     <div class="category">
                         <input oninput="checkStatus();" type="radio" name="status" id="binusian" value="binusian" 
                         @if(old('status', 'non-binusian') === 'binusian')
@@ -69,6 +69,10 @@
                         <p style="color:red" id="status_error"></p>
                     </div>
                 </div>
+                <div class="donthave">
+                    <div class="donthave1">Sudah memiliki akun?</div>
+                    <a href="{{ route('login') }}" class="donthave2">Login disini</a>
+                </div> 
             </div>
             
 

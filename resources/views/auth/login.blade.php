@@ -16,7 +16,7 @@
         <div>THON</div>
     </section>
 
-    <div class="container">
+    <div id='screen' class="container">
         <div class="title">Log In</div>
 
         <form onsubmit="return validateForm();" name="login_form" action="{{ route('login') }}" method="POST">
@@ -24,18 +24,18 @@
             <div class="user-detail">
                 <div class="input-box">
                     <span class="details">Nama Group</span>
-                    <input oninput="checkGroup();" id="group" name="group" type="text" placeholder="Masukkan nama group" autocomplete="off" required >
+                    <input oninput="checkGroup();" id="group" name="group" type="text" placeholder="Masukkan nama group" autocomplete="off"  >
                     <p style="color:red" id="group_error"></p>
                   
                 </div>
                 <div class="input-box">
                     <span class="details">Password</span>
-                    <input oninput="checkPassword();" id="password" name="password" type="password" placeholder="Masukkan password" autocomplete="off" required >
+                    <input oninput="checkPassword();" id="password" name="password" type="password" placeholder="Masukkan password" autocomplete="off"  >
                     <span><i id="toggler"class="far fa-eye"></i></span>
                     <p style="color:red" id="password_error"></p>
                 </div>
                 @error ('group')
-                <p style="color: red"> {{ $message}}</p>
+                <p id='loginerror' style="color: red"> {{ $message}}</p>
                 @enderror
 
             </div>
