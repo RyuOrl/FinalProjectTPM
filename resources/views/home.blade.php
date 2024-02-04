@@ -482,7 +482,7 @@
     <div class="contact">
         <div class="title-contact">Contact Us</div>
 
-        <form action="{{ route('send.mail') }}" onsubmit="tampilkanPopup()" method="POST">
+        <form action="{{ route('send.mail') }}" onsubmit="openPopup()" method="POST">
             @csrf
             <div class="colomn">
                 <div class="input-box">
@@ -502,11 +502,10 @@
                     <textarea class="inp" name="message" placeholder="Your Message" required></textarea>
                 </div>
             </div>
-            <button type="submit">Send</button>
+            <button class="button3" type="submit">Send</button>
         </form>
         
         <div  class="button-container">
-            <button class="button3" onclick="openPopup()">Send</button>
             <div class="popup" id="popup">
                 <h2>Thank You!</h2>
                 <p>Your email has been sent successfully.</p>

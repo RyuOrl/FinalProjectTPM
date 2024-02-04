@@ -5,8 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Timeline</title>
     <link rel="stylesheet" href="{{ asset('assets/css/style-timeline.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/style-loading.css') }}">
 </head>
 <body>
+    <div id="loading-container">
+        <img id="loading-image" src="{{ asset('assets/image/load1.png') }}" alt="Loading...">
+        <div><br>loading...</div>
+    </div>
     <nav class="navbar">
         <div class="nav-bar">
             <img src="{{ asset('assets/image/image1.png') }}" alt="" class="image1">
@@ -73,5 +78,6 @@
             <li class="x">Location : XXXXXXXX</li>
         </ul>
     </div>
+    <script src="{{ asset('assets/js/loading.js') }}"></script>
 </body>
 </html>

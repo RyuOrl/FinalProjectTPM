@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ asset('assets/css/style-update.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/style-loading.css') }}">
     <title>Update</title>
     <script src="https://unpkg.com/feather-icons"></script>
 </head>
@@ -11,6 +12,10 @@
   <img class="modal-content" id="img01">
 </div>
 <body>
+    <div id="loading-container">
+        <img id="loading-image" src="{{ asset('assets/image/load1.png') }}" alt="Loading...">
+        <div><br>loading...</div>
+    </div>
     <section class="main">
         <div>HACK</div>
         <img src="{{ asset('assets/image/image2.png') }}" alt="">
@@ -164,5 +169,6 @@
         feather.replace();
       </script>
       <script src="{{ asset('assets/js/update.js') }}"></script>
+      <script src="{{ asset('assets/js/loading.js') }}"></script>
 </body>
 </html>

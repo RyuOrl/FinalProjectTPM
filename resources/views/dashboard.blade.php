@@ -11,6 +11,10 @@
   <img class="modal-content" id="img01">
 </div>
 <body>
+    <div id="loading-container">
+        <img id="loading-image" src="{{ asset('assets/image/load1.png') }}" alt="Loading...">
+        <div><br>loading...</div>
+    </div>
     <nav class="navbar">
         <div class="nav-bar">
             <img src="{{ asset('assets/image/image1.png') }}" alt="" class="image1">

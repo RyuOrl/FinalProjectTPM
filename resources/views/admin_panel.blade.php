@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin</title>
     <link rel="stylesheet" href="{{ asset('assets/css/style-admin.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/style-loading.css') }}">
     <script src="https://unpkg.com/feather-icons"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
@@ -13,6 +14,10 @@
   <img class="modal-content" id="img01">
 </div>
 <body>
+    <div id="loading-container">
+        <img id="loading-image" src="{{ asset('assets/image/load1.png') }}" alt="Loading...">
+        <div><br>loading...</div>
+    </div>
     <nav class="navbar">
         <div class="nav-bar">
             <img src="{{ asset('assets/image/image1.png') }}" alt="" class="image1">
@@ -193,6 +198,7 @@
 
     <script src="{{ asset('assets/js/admin.js') }}"></script>
     <script src="{{ asset('assets/js/search.js') }}"></script>
+    <script src="{{ asset('assets/js/loading.js') }}"></script>
     
 
 </body>

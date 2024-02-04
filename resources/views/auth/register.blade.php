@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ asset('assets/css/style-register.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/style-loading.css') }}">
     <title>Register</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js">
@@ -11,6 +12,10 @@
     <script src="https://unpkg.com/feather-icons"></script>
 </head>
 <body>
+    <div id="loading-container">
+        <img id="loading-image" src="{{ asset('assets/image/load1.png') }}" alt="Loading...">
+        <div><br>loading...</div>
+    </div>
     <section class="main">
         <div>HACK</div>
         <img src="{{ asset('assets/image/image2.png') }}" alt="">
@@ -163,6 +168,7 @@
     </div>
     <script src="{{ asset('assets/js/hide_password_register.js') }}"> </script>
     <script src="{{ asset('assets/js/register.js') }}"></script>
+    <script src="{{ asset('assets/js/loading.js') }}"></script>
     
 </body>
 </html>
