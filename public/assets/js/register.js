@@ -414,6 +414,19 @@ function checkCardPath(){
   }
 } 
 
+function preventEnterSubmit(event) {
+  if (event.key === 'Enter') {
+      event.preventDefault();
+  }
+ }
+
+ document.forms['register_form'].addEventListener('keypress', preventEnterSubmit);
+
+ function removeEnterSubmitListener() {
+  document.forms['register_form'].removeEventListener('keypress', preventEnterSubmit);
+ }
+
+ 
 function shakeElement(elementId) {
   const element = document.getElementById(elementId);
   element.classList.add('error-shake');

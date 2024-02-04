@@ -43,9 +43,8 @@ function shakeElement(elementId) {
   element.classList.add('error-shake');
   setTimeout(() => {
     element.classList.remove('error-shake');
-  }, 300); // Sesuaikan dengan durasi animasi getaran (dalam milidetik)
+  }, 300);
 }
-
 
 function validateForm() {
  
@@ -56,6 +55,9 @@ function validateForm() {
     return false;
   }
 }
+
+
+
 
 
 

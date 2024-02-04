@@ -14,9 +14,9 @@ return new class extends Migration
         Schema::create('leaders', function (Blueprint $table) {
             $table->id();
             $table->string('full_name');
-            $table->string('email')->unique();
-            $table->string('whatsapp_number')->unique();
-            $table->string('line_id')->unique();
+            $table->string('email');
+            $table->string('whatsapp_number');
+            $table->string('line_id');
             $table->string('github_id')->nullable();
             $table->string('birth_place');
             $table->date('birth_date');

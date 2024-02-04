@@ -12,7 +12,7 @@ class Leader extends Model
     protected $guarded = [];
 
 
-    public function user(): BelongsTo
+    public function group(): BelongsTo
     {
         return $this->belongsTo(User::class, 'group_id');
     }

@@ -9,6 +9,13 @@ class UserController extends Controller
 {
     public function read(){
         $user = Leader::where('group_id', auth()->user()->id)->first();
-        return view('dashboard', compact('user'));
+        $group = auth()->user();
+        return view('dashboard', compact('user', 'group'));
     }
+
+    public function timeline(){
+        return view('timeline');
+    }
+
+   
 }

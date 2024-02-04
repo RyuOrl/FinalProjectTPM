@@ -16,38 +16,9 @@
     text-decoration: none;
 }
 
-/* ------------------------------------- */
-#loading-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    padding: auto;
-    background-color: #060A06; 
-    overflow: hidden;  
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
-    
-}
 
-#loading-image {
-    max-width: 100%; 
-    max-height: 100%;
-    display: inline-block;
-    position: relative;
-    transition: transform  2s ease-in-out; 
-    opacity: 1;
-    text-align: center;
-}
 
-#loading-image.animated {
-    transform: rotate(0deg); /* Initial rotation angle */
-}
 
-/* --------------------------------------- */
 
 html, body {
     scroll-behavior: smooth;
@@ -58,6 +29,7 @@ body {
     background-color: var(--primary);
     color: var(--font_nav);
 }
+
 
 .navbar {
     display: flex;
@@ -73,18 +45,28 @@ body {
     z-index: 9999;
 }
 
-.navbar .navbar-nav a {
+.navbar .navbar-nav {
+    display: flex;
+    align-items: center;
+}
+
+
+.navbar .navbar-nav .mid a {
     color: var(--font_nav);
     display: inline-block;
     font-size: 13px;
     margin: 0 2rem;
 }
 
-.navbar .navbar-nav a:hover {
+.navbar .navbar-nav .mid a:hover {
     color: var(--hover-font);
 }
 
-.navbar .navbar-nav a::after {
+.navbar-nav {
+    display: flex;
+}
+
+.navbar .navbar-nav .mid a::after {
     content: '';
     display: block;
     padding-bottom: 0.5rem;
@@ -97,8 +79,12 @@ body {
     transform: scaleX(0.5);
 }
 
-.extra a {
-    margin: 0px 15px;
+.navbar .navbar-nav .mid a.active {
+    color: var(--hover-font);
+}
+
+.navbar .navbar-nav .mid a.active::after {
+    transform: scaleX(0.5);
 }
 
 .navbar .extra a{
@@ -117,17 +103,17 @@ body {
     background-color: #303030;
 }
 
-#humbur-menu {
-    display: none;   
-}
-
 .extra {
     display: flex;
 }
 
+#humbur-menu {
+    display: none;   
+}
+
 .page {
-    min-height: 130vh;
-    background-image: url('../image/bghome.png');
+    min-height: 100vh;
+    background-image: url('../image/image3.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -184,7 +170,7 @@ body {
     font-weight: 400;
 }
 
-/* Laptop */
+/* Laptop
 @media (max-width: 1366px){
     html {
         font-size: 75%;
@@ -200,9 +186,10 @@ body {
     #humbur-menu{
         display: inline-block;
         margin-top: 6px;
+        margin-left: 20px;
     }
 
-    .navbar .navbar-nav {
+    .navbar .navbar-nav .mid {
         position: absolute;
         top: 100%;
         right: -100%;
@@ -212,11 +199,11 @@ body {
         transition: 0.3s;
     }
 
-    .navbar .navbar-nav.active {
+    .navbar .navbar-nav .mid.active {
         right: 0;
     }
 
-    .navbar .navbar-nav a{
+    .navbar .navbar-nav .mid a{
         color: var(--primary);
         display: block;
         margin: 1.5rem;
@@ -224,11 +211,11 @@ body {
         font-size: 1.5rem;
     }
 
-    .navbar .navbar-nav a::after {
+    .navbar .navbar-nav .mid a::after {
         transform-origin: 0 0;
     }
 
-    .navbar .navbar-nav a:hover::after {
+    .navbar .navbar-nav .mid a:hover::after {
         transform: scaleX(0.2);
     }
 }
@@ -315,10 +302,11 @@ body {
     border-color: transparent;
     border-radius: 24px;
     transition: 0.4s;
-    cursor: pointer;
+    /* cursor: pointer; */
 } 
 
 .card2{
+    margin-top: -20px;
     width: 400px;
     height: 90px;
     /* height: 600px; */
@@ -330,10 +318,11 @@ body {
     border-color: transparent;
     border-radius: 24px;
     transition: 0.4s;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .card3{
+    margin-top: 20px;
     width: 400px;
     height: 90px;
     /* height: 600px; */
@@ -344,7 +333,7 @@ body {
     border-color: transparent;
     border-radius: 24px;
     transition: 0.4s;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .card1:hover{
@@ -474,7 +463,7 @@ body {
 .vertical{
     color: #717471;
     border: 1.5px dashed;
-    height: 1800px;
+    height: 1500px;
     position: absolute;
     left: 25%;
     /* margin-bottom: 1000px; */
@@ -487,7 +476,7 @@ body {
 }
 
 .mentorContainer{
-    /* margin-top: -250px; */
+    margin-top: -10%;
     /* position: relative; */
     display: flex;
     /* flex-wrap: wrap; */
@@ -495,7 +484,7 @@ body {
     padding: 48px 0;
     margin-left: 550px;
     margin-right: 100px;
-    /* margin-bottom: 200px; */
+    margin-bottom: 8%;
     box-shadow: #FFFFFF;
 }
 
@@ -507,7 +496,7 @@ body {
     color: #FFFFFF;
     text-align: center;
     font-family: poppins;
-    font-size: 18px;
+    /* font-size: 18px; */
     border-radius: 40px;
     filter: grayscale(70%);
 }
@@ -524,13 +513,16 @@ body {
     padding: 0px;
     margin-top: 20px;
     font-weight: 600;
+    font-size: 24px;
 }
 .job{
     font-weight: 300;
+    font-size: 16px;
 }
 
 .company{
     font-weight: 300;
+    font-size: 16px;
 }
 
 .img1{
@@ -548,7 +540,7 @@ body {
 .vertical2{
     color: #717471;
     border: 1.5px dashed;
-    height: 700px;
+    height: 675px;
     position: absolute;
     left: 75%;
     margin-bottom: 5%;
@@ -599,11 +591,10 @@ body {
 }
 
 .aboutPage {
-    margin-top: 300px;
+    margin-top: 190px;
 }
 
 .header{
-    margin-top: 100px;
     font-family: poppins;
     font-size: 64px;
     text-align: center;
@@ -929,6 +920,48 @@ body {
     color: var(--font_nav);
 }
 
+/* -----------Pop up message when submitted----------- */
+.popup{
+    width: 400px;
+    background: #FFFFFF;
+    border-radius: 6px;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    padding: 30px 30px 30px;
+    color: #5f625f;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+    /* z-index: 999; */
+}
+
+.open-popup{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+body.open-popup {
+    overflow: hidden;
+}
+
+.popup button{
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background-color: #352DEB;
+    color: #FFFFFF;
+    border: 0;
+    outline: none;
+    font-size: 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+
 /* --------------------------------------------------- */
 
 .timeline {
@@ -944,10 +977,6 @@ body {
     font-weight: 600;
     margin-bottom: 50px;
     margin-top: 50px;
-}
-
-.timeline .stt {
-    /* display: flex;  */
 }
 
 .step {
@@ -981,7 +1010,6 @@ body {
 .timeline .stt .step h3 {
     font-size: 15px;
     font-weight: 200;
-    /* padding: 15px; */
 }
 
 .timeline .stt .step .date {
@@ -1198,7 +1226,7 @@ form .colomn .input-box .details {
     background: transparent;
 }
 
-button {
+.button3 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1226,7 +1254,7 @@ button {
     font-family: poppins;
 }
 
-button:hover {
+.button3:hover {
     background-color: #808080;
 }
 
@@ -1238,3 +1266,99 @@ button:hover {
     display: flex;
     transition: transform 0.5s ease-in-out;
   }
+
+
+/* -------------------------------------------------- */
+
+.footer {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.colm1,
+.colm2 {
+    flex: 0 0 auto;
+    margin-left: 100px;
+}
+
+.colm3 {
+    margin-left: auto;
+    margin-right: 100px;
+}
+
+.footer img {
+    width: 150px;
+    height: 140px;
+    margin: 20px 0 10px;
+}
+
+.footer .colm2 img {
+    height: 50px;
+    width: 200px;
+}
+
+.footer h1 {
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.logo1 {
+    margin: 10px;
+    margin-top: 50px;
+}
+
+.colm3 h1 span {
+    font-weight: 700;
+    font-size: 17px;
+}
+
+.end {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+    font-size: 12px;
+    font-weight: 300;
+    background-color: #303030;
+}
+
+.end1 {
+    margin-left: 5%;
+}
+
+.end2 {
+    margin-right: 5%;
+}
+
+.subs {
+    display: flex;
+    font-family: poppins;
+    margin-top: 10px;
+}
+
+.subs input {
+    border: 1px solid var(--font_nav);
+    background: transparent;
+    padding: 15px 5px 15px 15px;
+    color: var(--font_nav);
+    border-radius: 20px 0 0 20px;
+    width: 300px;
+    font-family: poppins;
+}
+
+.subs button {
+    padding: 15px;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+    background: var(--lets_but);
+    color: var(--font_nav);
+    border: 1px solid var(--font_nav);
+    font-family: poppins;
+    font-weight: 500;
+}
+
+.garis5 {
+    margin-top: 100px;
+    height: 2px;
+    background: var(--hover-font);
+}

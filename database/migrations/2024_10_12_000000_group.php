@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('groups', function (Blueprint $table) {
             $table->id();
-            $table->string('group')->unique();
+            $table->string('group');
             $table->string('password');
             $table->enum('status', ['binusian', 'non-binusian']);
             $table->enum('role', ['user', 'admin'])->default('user');

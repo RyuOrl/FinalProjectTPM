@@ -26,6 +26,7 @@ Route::get('/home', function(){
 });
 
 Route::get('/user/dashboard',[UserController::class, 'read'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/user/timeline',[UserController::class, 'timeline'])->middleware(['auth', 'verified'])->name('timeline');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -38,6 +39,18 @@ Route::get('/admin/panel', [AdminController::class, 'adminPanel'])
 
 Route::post('/send/mail', [MailController::class, 'sendMail'])->name('send.mail');
 
+Route::post('/update/data', [AdminController::class, 'updateData'])->name('update.data');
+
+Route::get('/search', [AdminController::class, 'search']);
+
+
+Route::get('/admin/panel/sort', [AdminController::class, 'adminSort'])->name('admin.sort');
+
+Route::get('/update/{id}', [AdminController::class, 'updatePage']);
+
+Route::post('/update/post/{id}', [AdminController::class, 'update']);
+
+Route::get('/delete/{id}', [AdminController::class, 'delete']);
 
 require __DIR__.'/auth.php';
 

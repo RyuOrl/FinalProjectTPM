@@ -5,11 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="{{ asset('assets/css/style-login.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/style-loading.css') }}">
     <script src="https://unpkg.com/feather-icons"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
+    <div id="loading-container">
+        <img id="loading-image" src="{{ asset('assets/image/load1.png') }}" alt="Loading...">
+        <div><br>loading...</div>
+    </div>
     <section class="main">
         <div>HACK</div>
         <img src="{{ asset('assets/image/image2.png') }}" alt="">
@@ -49,8 +54,10 @@
                 <button type="submit" class="submit" id="sub">Log In</button>
             </div>
         </form>
+        
 </div>
 <script src="{{ asset('assets/js/login.js') }}"></script>
 <script src="{{ asset('assets/js/hide_password_login.js') }}"></script>
+<script src="{{ asset('assets/js/loading.js') }}"></script>
 </body>
 </html>

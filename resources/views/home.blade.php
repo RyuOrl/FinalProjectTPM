@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main</title>
+    <title>Home</title>
     <link rel="stylesheet" href="{{ asset('assets/css/style-home.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/style-loading.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://unpkg.com/feather-icons"></script>
 </head>
@@ -64,9 +65,9 @@
             </div>
 
             <section class="vtr">
-                <img class="vektor v6" src="{{ asset('assets/image/image6.png') }}" width="550" height="600" alt="">
+                <img class="vektor v6" src="{{ asset('assets/image/image6.png') }}" width="550" height="550" alt="">
                 <br>
-                <img class="vektor v7" src="{{ asset('assets/image/image7.png') }}" width="480" height="680" alt="">
+                <img class="vektor v7" src="{{ asset('assets/image/image7.png') }}" width="480" height="480" alt="">
             </section>
             
             <section class="prizegroup">
@@ -129,72 +130,72 @@
                 <h3>Meet your mentors!</h3>
             </div>
             
-        <div class="mentorContainer">
-            <div class="profiles">
-                <img src="{{ asset('assets/image/Ellipse1.png') }}" class="img1" alt="">
-                <div class="name">NAME NAME</div>
-                <p class="job">Software Engineer at</p>
-                <p class="company">----- <p>----- <p>-------</p></p></p>
+            <div class="mentorContainer">
+                <div class="profiles">
+                    <img src="{{ asset('assets/image/jason.png') }}" class="img1" alt="">
+                    <div class="name">Jason Holler</div>
+                    <p class="job">Lead UI/UX Designer</p>
+                    <p class="company">Google inc.</p>
+                 </div>
+
+             <div class="profiles">
+                <img src="{{ asset('assets/image/paula.png') }}" class="img1" alt="">
+                <div class="name">Paula Ellis</div>
+                <p class="job">UI/UX Designer</p>
+                <p class="company">Google inc.</p>
              </div>
 
              <div class="profiles">
-                <img src="{{ asset('assets/image/Ellipse2.png') }}" class="img1" alt="">
-                <div class="name">NAME NAME</div>
-                <p class="job">Software Engineer at</p>
-                <p class="company">----- <p>----- <p>-------</p></p></p>
-             </div>
-
-             <div class="profiles">
-                <img src="{{ asset('assets/image/Ellipse3.png') }}" class="img1" alt="">
-                <div class="name">NAME NAME</div>
-                <p class="job">Software Engineer at</p>
-                <p class="company">----- <p>----- <p>-------</p></p></p>
+                <img src="{{ asset('assets/image/collyn.png') }}" class="img1" alt="">
+                <div class="name">Collyn Randal</div>
+                <p class="job">Software Engineer</p>
+                <p class="company">Google inc.</p>
              </div>
         </div>
 
         <div class="mentorContainer">
             <div class="profiles">
-                <img src="{{ asset('assets/image/Ellipse1.png') }}" class="img1" alt="">
-                <div class="name">NAME NAME</div>
-                <p class="job">Software Engineer at</p>
-                <p class="company">----- <p>----- <p>-------</p></p></p>
+                <img src="{{ asset('assets/image/gianna.png') }}" class="img1" alt="">
+                <div class="name">Gianna Leon</div>
+                <p class="job">Senior Software Engineer</p>
+                <p class="company">GoTo</p>
              </div>
 
              <div class="profiles">
-                <img src="{{ asset('assets/image/Ellipse2.png') }}" class="img1" alt="">
-                <div class="name">NAME NAME</div>
-                <p class="job">Software Engineer at</p>
-                <p class="company">----- <p>----- <p>-------</p></p></p>
+                <img src="{{ asset('assets/image/loretta.png') }}" class="img1" alt="">
+                <div class="name">Loretta Fields</div>
+                <p class="job">Application Developer</p>
+                <p class="company">GoTo</p>
              </div>
 
              <div class="profiles">
-                <img src="{{ asset('assets/image/Ellipse3.png') }}" class="img1" alt="">
-                <div class="name">NAME NAME</div>
-                <p class="job">Software Engineer at</p>
-                <p class="company">----- <p>----- <p>-------</p></p></p>
+                <img src="{{ asset("assets/image/adam.png") }}" class="img1" alt="">
+                <div class="name">Adam Hampton</div>
+                <p class="job">Software Architect</p>
+                <p class="company">Cisco</p>
              </div>
         </div>
 
         <div class="mentorContainer">
             <div class="profiles">
-                <img src="{{ asset('assets/image/Ellipse1.png') }}" class="img1" alt="">
-                <div class="name">NAME NAME</div>
-                <p class="job">Software Engineer at</p>
-                <p class="company">----- <p>----- <p>-------</p></p></p>
+                <img src="{{ asset('assets/image/julian.png') }}" class="img1" alt="">
+                <div class="name">Julian Gilbert</div>
+                <p class="job">Business Analyst</p>
+                <p class="company">Lenovo</p>
              </div>
 
              <div class="profiles">
-                <img src="{{ asset('assets/image/Ellipse2.png') }}" class="img1" alt="">
-                <div class="name">NAME NAME</div>
-                <p class="job">Software Engineer at</p>
-                <p class="company">----- <p>----- <p>-------</p></p></p>
+                <img src="{{ asset('assets/image/rose.png') }}" class="img1" alt="">
+                <div class="name">Rose Douglas</div>
+                <p class="job">Product Manager</p>
+                <p class="company">Lenovo</p>
              </div>
 
              <div class="profiles">
-                <img src="{{ asset('assets/image/Ellipse3.png') }}" class="img1" alt="">
-                <div class="name">NAME NAME</div>
-                <p class="job">Software Engineer at</p>
-                <p class="company">----- <p>----- <p>-------</p></p></p>
+                <img src="{{ asset('assets/image/glenn.png') }}" class="img1" alt="">
+                <div class="name">Glenn Andrew</div>
+                <p class="job">Senior Product Manager</p>
+                <p class="company">NVIDIA</p>
              </div>
         </div>
                 
@@ -209,31 +210,31 @@
             
             <div class="mentorContainer2">
                 <div class="profiles">
-                    <img src="{{ asset('assets/image/Ellipse1.png') }}" class="img1" alt="">
-                    <div class="name">NAME NAME</div>
-                    <p class="job">Software Engineer at</p>
-                    <p class="company">----- <p>----- <p>-------</p></p></p>
+                    <img src="{{ asset('assets/image/matias.png') }}" class="img1" alt="">
+                    <div class="name">Matias Duarte</div>
+                    <p class="job">Head of Design</p>
+                    <p class="company">Google inc.</p>
                  </div>
     
                  <div class="profiles">
-                    <img src="{{ asset('assets/image/Ellipse2.png') }}" class="img1" alt="">
-                    <div class="name">NAME NAME</div>
-                    <p class="job">Software Engineer at</p>
-                    <p class="company">----- <p>----- <p>-------</p></p></p>
+                    <img src="{{ asset('assets/image/robin.png') }}" class="img1" alt="">
+                    <div class="name">Robin Walton</div>
+                    <p class="job">Director of <p>Product Management</p></p>
+                    <p class="company">Microsoft</p>
                  </div>
     
                  <div class="profiles">
-                    <img src="{{ asset('assets/image/Ellipse3.png') }}" class="img1" alt="">
-                    <div class="name">NAME NAME</div>
-                    <p class="job">Software Engineer at</p>
-                    <p class="company">----- <p>----- <p>-------</p></p></p>
+                    <img src="{{ asset('assets/image/lynn.png') }}" class="img1" alt="">
+                    <div class="name">Lynn Hodge</div>
+                    <p class="job">Head Software Development</p>
+                    <p class="company">Intel</p>
                  </div>
             </div>    
             <hr class="hr3">
         </section>
             <br>
 
-        <div class="kosong" id="kosong2"></div>
+        <div class="kosong" id="kosong9"></div>
 
         <section class="aboutPage" id="aboutpage">
             <div class="header">About
@@ -504,14 +505,65 @@
             <button type="submit">Send</button>
         </form>
         
-    
+        <div  class="button-container">
+            <button class="button3" onclick="openPopup()">Send</button>
+            <div class="popup" id="popup">
+                <h2>Thank You!</h2>
+                <p>Your email has been sent successfully.</p>
+                <button type="button" onclick="closePopup()">Ok</button>
+            </div>
+        </div>
         
     </div>
+    <div class="garis5"></div>
+
+    <div class="footer">
+        <div class="colm1">
+            <h1>Powered and Organized by:</h1>
+            <div class="pic">
+                <img src="{{ asset('assets/image/power (1).png') }}" alt="" class="power1">
+                <img src="{{ asset('assets/image/power (2).png') }}" alt="" class="power2">
+            </div>
+        </div>
+
+        <!-- <div class="colm2">
+            <h1>Official Learning Partner of</h1>
+            <img src="/Image/BNCC1.png" alt="">
+            <h1>Official Empowering Affiliate of</h1>
+            <img src="/Image/BNCC1.png" alt="">
+        </div> -->
+
+        <div class="colm3">
+            <h1>Support@technoscape.com</h1>
+            <!-- <div class="subs">
+                <input type="text" name="email" placeholder="Masukkan email anda">
+                <button>Subscribe</button>
+            </div>        -->
+            <div class="logo">
+                <a href="" class="fa-brands fa-facebook"></a>
+                <a href="" class="fa-brands fa-instagram"></a>
+                <a href="" class="fa-brands fa-twitter"></a>
+                <a href="" class="fa-brands fa-linkedin"></a>
+                <a href="" class="fa-brands fa-tiktok"></a>
+                <a href="" class="fa-brands fa-github"></a>
+                <a href="" class="fa-brands fa-discord"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="end">
+        <div class="end1">©2024 OrTech</div>
+        <div class="end2">Privacy Policy & Terms of Service</div>
+    </div>
+
+
+
 
     <script>
         feather.replace();
     </script>
-
     <script src="{{ asset('assets/js/home.js') }}"></script>
+    <script src="{{ asset('assets/js/loading.js') }}"></script>
+   
 </body>
 </html>

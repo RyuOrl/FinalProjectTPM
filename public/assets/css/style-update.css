@@ -1,0 +1,455 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: poppins;
+ }
+
+ :root {
+   --primary: #060A06;
+   --font_nav: #FFFFFF;
+   --lets_but: #352DEB;
+}
+
+ body {
+   height: 100vh;
+   justify-content: center;
+   align-items: center;
+   background-color: var(--primary);
+   background-image: url('../image/image3.png');
+   background-position: center;
+   background-repeat: no-repeat;
+   background-position: bottom right;
+   background-attachment: fixed;
+   color: var(--font_nav);
+ }
+
+ .main {
+   color: #FFFFFF;
+   font-family: poppins;
+   font-size: 70px;
+   font-weight: 500;
+   padding-top: 10px;
+   flex-wrap: wrap;
+   display: flex;
+   justify-content: center;
+}
+
+.main img {
+   margin: 20px 10px;
+   width: 70px;
+   height: 70px;
+}
+
+.colmn {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.colmn .container1,
+.colmn .container2 {
+    border: 1px solid var(--font_nav);
+    padding: 30px 60px 60px 60px;
+    border-radius: 45px;
+    width: 700px;
+    background: linear-gradient(to top, rgba(53, 45, 235, 0.1) 30%, rgba(255, 255, 255, 0.1) 80%);
+}
+
+.colmn .container1 h1,
+.colmn .container1 h2,
+.colmn .container2 h1,
+.colmn .container2 h2 {
+    text-align: center;
+    justify-content: center;
+}
+
+.colmn .container1 h1,
+.colmn .container2 h1 {
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.colmn .container1 h2,
+.colmn .container2 h2 {
+    margin-top: 20px;
+    font-size: 25px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+table {
+    width: 100%;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+tr td {
+    padding: 10px 5px;
+}
+
+td:first-child {
+    width: 250px;
+}
+
+.container1 tr:nth-of-type(2n){
+    background: #202020;
+}
+
+.container {
+   display: block;
+   color: #FFFFFF;
+   max-width: 734px;
+   width: 100%;
+   padding: 30px 60px 60px 60px;
+   border-radius: 45px;
+   border: 1px solid #FFFFFF;
+   background: linear-gradient(to top, rgba(53, 45, 235, 0.1) 30%, rgba(255, 255, 255, 0.1) 80%);
+   margin-bottom: 20px;
+} */
+
+ .container .title {
+    font-size: 48px;
+    font-weight: 600;
+    position: relative;
+    text-align: center;
+ }
+
+ .asset {
+   margin: 20px;
+   display: flex;
+   justify-content:center;
+   align-items: center;
+ }
+
+ .garis {
+   width: 462px;
+   height: 2.5px;
+   background-color: #352DEB;
+ }
+
+ .lingkaran2 {
+   width: 30px;
+   height: 30px;
+   background-color: #352DEB;
+   border-radius: 50%;
+}
+
+.lingkaran1 {
+   width: 30px;
+   height: 30px;
+   background-color: #352DEB;
+   border-radius: 50%;
+}
+
+.container .title1 {
+margin-top: 20px;
+   font-size: 32px;
+   font-weight: 500;
+   text-align: center;
+}
+
+form .user-detail .input-box {
+   margin: 20px 0px 15px 0px;
+}
+
+form .user-detail .input-box .details {
+   font-size: 20px;
+   font-weight: 500;
+}
+
+.details {
+   padding-bottom: 50px;
+}
+
+.user-detail .input-box input {
+   color: #FFFFFF;
+   height: 45px;
+   width: 100%;
+   border-radius: 10px;
+   border: 1px solid #ccc;
+   padding-left: 15px;
+   background: transparent
+}
+
+.title5 {
+   font-size: 20px;
+   font-weight: 500;
+}
+
+form .binusian-details .category {
+   display: flex;
+   width: 100%;
+   margin: 10px 0px;
+   
+}
+
+label {
+   position: relative;
+   margin-right: 100px;
+   padding: 10px;
+   border: 1px solid #ccc;
+   border-radius: 10px;
+   align-items: center;
+   display: flex;
+   cursor: pointer;
+}
+
+label:before {
+   content: '';
+   height: 20px;
+   width: 20px;
+   background: transparent;
+   border-radius: 50%;
+   border: 2px solid #ccc;
+   margin-right: 10px;
+}
+
+.button {
+   display: flex;
+   justify-content: center;
+   margin-top: 40px;
+}
+
+#sub {
+   margin-left: 250px;
+}
+
+.submit {
+   text-decoration: none;
+   font-size: 24px;
+   font-weight: 400;
+   color: #FFFFFF;
+   padding: 10px 40px;
+   border-radius: 50px;
+   border: 3px solid white;
+   background-color: transparent;
+}
+
+.submit:hover{
+   background: linear-gradient(to bottom, #FFFFFF33 20%, #352DEB1A 100%);
+}
+
+.input-box {
+   position: relative;
+}
+
+.input-box .icon {
+   position: absolute;
+   right: 15px;
+   top: 55%;
+   cursor: pointer;
+   z-index: 1;
+}
+
+.input-box .up {
+   position: absolute;
+   right: 15px;
+   top: 42%;
+   cursor: pointer;
+   z-index: 1;
+}
+
+.input-box input {
+   padding-right: 10px;
+}
+
+input[type="file"]{
+   color: #FFFFFF;
+   height: 45px;
+   width: 45px;
+   border-radius: 10px;
+   border: 1px solid #ccc;
+   padding-left: 15px;
+   background: transparent
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+   opacity: 0;
+   width: 30px;
+   height: 30px;
+   cursor: pointer;
+   position: relative;
+   z-index: 2;
+}
+
+input[type=file]::file-selector-button {
+   font-size: 10px;
+   margin-right: 10px;
+   margin-top: 10px;
+   border: none;
+   background: linear-gradient(to bottom, #FFFFFF33 20%, #352DEB1A 100%);
+   padding: 5px 15px;
+   border-radius: 8px;
+   color: #fff;
+   cursor: pointer;
+   border: 1px solid white;
+ }
+ 
+ input[type=file]::file-selector-button:hover {
+   background: #060A06;
+   color: #ccc;
+ }
+
+ .format {
+   font-size: 12px;
+   margin-left: 20px;
+ }
+
+.cont .container .user-detail .input-box h2 {
+    font-size: 15px;
+    font-weight: 300;
+}
+
+form .binusian-details .category {
+    display: flex;
+    width: 100%;
+    margin: 10px 0px;
+    
+}
+
+label {
+    position: relative;
+    margin-right: 50px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+}
+ 
+label:before {
+    content: '';
+    height: 20px;
+    width: 20px;
+    background: transparent;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    margin-right: 10px;
+}
+ 
+input[type="radio"]{
+    display: none;
+}
+ 
+input[type="radio"]:checked + label{
+    background: linear-gradient(to bottom, #FFFFFF33 100%, #352DEB1A 100%);
+}
+ 
+input[type="radio"]:checked + label:before {
+    height: 18px;
+    width: 18px;
+    border: 3px solid white;
+    background-color: #352DEB;
+}
+
+.container1 {
+    height: 800px;
+}
+
+body.modal-open {
+   overflow: hidden;
+}
+
+.modal {
+   display: none;
+   position: fixed;
+   z-index: 1;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   overflow: auto;
+   background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+   margin: 15% auto;
+   display: block;
+   max-width: 80%;
+   max-height: 80%;
+}
+
+/* Blur everything except the modal when it is opened */
+body.modal-open .container,
+body.modal-open .navbar,
+body.modal-open .page {
+   filter: blur(5px);
+}
+
+.img-button button {
+   background-color: rgba(169, 169, 169, 0.5);
+   color: #fff;
+   border: none;
+   padding: 10px 15px;
+   border-radius: 8px;
+   cursor: pointer;
+   margin-right: 10px;
+   font-size: 11px;
+}
+
+.img-button button:hover {
+   background-color: rgba(169, 169, 169, 0.8);
+}
+
+.img-button button:last-child {
+   margin-right: 0;
+}
+
+.sort1 a:visited {
+   color: inherit;
+}
+
+
+body.modal-open {
+   overflow: hidden;
+}
+
+.modal {
+   display: none;
+   position: fixed;
+   z-index: 1;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   overflow: auto;
+   background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+   margin: 15% auto;
+   display: block;
+   max-width: 80%;
+   max-height: 80%;
+}
+
+/* Blur everything except the modal when it is opened */
+body.modal-open .container,
+body.modal-open .navbar,
+body.modal-open .page {
+   filter: blur(5px);
+}
+
+.img-button button {
+   background-color: rgba(169, 169, 169, 0.5);
+   color: #fff;
+   border: none;
+   padding: 10px 15px;
+   border-radius: 8px;
+   cursor: pointer;
+   margin-right: 10px;
+   font-size: 11px;
+}
+
+.img-button button:hover {
+   background-color: rgba(169, 169, 169, 0.8);
+}
+
+.img-button button:last-child {
+   margin-right: 0;
+}

@@ -163,12 +163,6 @@
     </div>
     <script src="{{ asset('assets/js/hide_password_register.js') }}"> </script>
     <script src="{{ asset('assets/js/register.js') }}"></script>
-    <script>
-        function triggerFileInput(inputId) {
-            document.getElementById(inputId).click();
-        }
-        feather.replace();
-      </script>
     
 </body>
 </html>
