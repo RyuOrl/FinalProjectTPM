@@ -140,8 +140,8 @@
               <div class="header">
                   <h1>Group Name</h1>
                   <td>
-                      <button class="edit"></button>
-                      <button class="delete"></button>
+                      <a href="/update/{{ $item->id }}" class="edit"></a>
+                      <a href="/delete/{{ $item->id }}" class="delete"></a>
                   </td>
               </div>
 

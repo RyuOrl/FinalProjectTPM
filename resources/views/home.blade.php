@@ -242,6 +242,9 @@
                 <br>Crystal Hackathon is a publicly available hackathon for everyone who are passionate in new technologies and have an innovative mindset. We want those technologies to have</br><br>Our mission is to connect innovators help create new or accelerate existing technologies that will help the future of our world by giving them the space needed to innovate.</br><br>Come be a part of this innovative community and join us as a contestant team! Let’s get innovative!</br> 
                 </div>
             </div>
+            <div class="centered-download">
+                <a href="{{ asset('assets/Guidebook.pdf') }}" download="Guidebook.pdf" class="download">Guidebook</a>
+            </div>
         </section>
 
         <section class="benefitPage">

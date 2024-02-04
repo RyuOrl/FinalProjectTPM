@@ -16,9 +16,37 @@
     text-decoration: none;
 }
 
+/* ------------------------------------- */
+
+#loading-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: auto;
+    background-color: #060A06; 
+    overflow: hidden;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    
+}
+
+#loading-image {
+    max-width: 100%; 
+    max-height: 100%;
+    display: inline-block;
+    position: relative;
+    transition: transform  2s ease-in-out; 
+    opacity: 1;
+    text-align: center;
+}
 
 
 
+/* --------------------------------------- */
 
 html, body {
     scroll-behavior: smooth;
@@ -592,9 +620,10 @@ body {
 
 .aboutPage {
     margin-top: 190px;
+    justify-content: center;
 }
 
-.header{
+.header {
     font-family: poppins;
     font-size: 64px;
     text-align: center;
@@ -605,7 +634,7 @@ body {
     margin: 20px;
 }
 
-.h1{
+.h1 {
     display: flex;
     font-family: poppins;
     align-items: center;
@@ -616,6 +645,34 @@ body {
     font-weight: 400;
     padding: 0 50px auto 50px;
     margin-bottom: 10%;
+}
+
+.centered-download {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.download {
+    text-align: center;
+    color: var(--font_nav);
+    font-size: 28px;
+    border: 1.5px solid var(--font_nav);
+    padding: 20px 40px;
+    border-radius: 45px;
+    background: linear-gradient(to bottom, #FFFFFF33 20%, #352DEB1A 100%);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.download:hover {
+    background: linear-gradient(to bottom, #e32b021d 10%, #3f38d31a 100%);
+    font-weight: 400;
+}
+
+
+.centered-download {
+    justify-content: center;
 }
 
 .money{
@@ -1285,6 +1342,7 @@ form .colomn .input-box .details {
 .colm3 {
     margin-left: auto;
     margin-right: 100px;
+    margin-top: 80px;
 }
 
 .footer img {
@@ -1303,9 +1361,17 @@ form .colomn .input-box .details {
     font-weight: 300;
 }
 
-.logo1 {
-    margin: 10px;
-    margin-top: 50px;
+.logo a {
+    font-size: 35px;
+}
+
+.footer .colm3 h1 {
+    margin-bottom: 10px;
+}
+
+.fa-brands {
+    color: #ccc;
+    padding: 10px;
 }
 
 .colm3 h1 span {
@@ -1316,8 +1382,8 @@ form .colomn .input-box .details {
 .end {
     display: flex;
     justify-content: space-between;
-    margin-top: 100px;
-    font-size: 12px;
+    margin-top: 50px;
+    font-size: 14px;
     font-weight: 300;
     background-color: #303030;
 }
@@ -1361,4 +1427,15 @@ form .colomn .input-box .details {
     margin-top: 100px;
     height: 2px;
     background: var(--hover-font);
+}
+
+.pic {
+    display: flex;
+    align-items: center;
+}
+
+.pic .power2 {
+    margin-left: 20px;
+    height: 150px;
+    height: 40px;
 }
